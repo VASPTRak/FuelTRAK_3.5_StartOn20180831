@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\FTLDAP_WEX\", "..\FTLDAP_WEX", "{784780FA-CC9D-400C-9589-6259E6A32249}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		Debug.AspNetCompiler.VirtualPath = "/FTLDAP_WEX"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Temp\Business\FTLDAP_WEX\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\FTLDAP_WEX\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/FTLDAP_WEX"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Temp\Business\FTLDAP_WEX\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\FTLDAP_WEX\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4688"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuelTrakKeyEncoder", "FuelTrakKeyEncoder\FuelTrakKeyEncoder.csproj", "{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Debug|.NET.ActiveCfg = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Debug|.NET.Build.0 = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Release|.NET.ActiveCfg = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Release|.NET.Build.0 = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{784780FA-CC9D-400C-9589-6259E6A32249}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Release|.NET.ActiveCfg = Release|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1D7CE05B-1C35-41D9-B0D8-E5ACF7E02F61}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

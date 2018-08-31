@@ -1,0 +1,379 @@
+Imports Microsoft.VisualBasic
+Imports System
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Threading
+
+Public Class TimerStarter
+    Private Shared threadingTimer As Timer
+    Dim path As String = HttpContext.Current.Server.MapPath("AutoExportTXTN\Data")
+    'Dim path As String = System.Web.HttpContext.Current.Server.MapPath("~\AutoExportTXTN\Data")
+
+    Public Shared Sub StartTimer()
+        If threadingTimer Is Nothing Then
+            threadingTimer = New Timer(New TimerCallback(AddressOf CheckData), HttpContext.Current, 0, 60000)
+        End If
+    End Sub
+
+    Private Shared Sub CheckData(ByVal sender As Object)
+        'Get auto pull setup for Export TXTN
+        Dim GenDAL As New GeneralizedDAL
+        Dim ds As DataSet
+        ds = GenDAL.GetDataSet("SELECT FlagAutoExport, AutoExportTime, AutoExportFileExtn, AutoExportOverwrite FROM PSCHED")
+        If Not ds Is Nothing Then
+            If ds.Tables.Count > 0 Then
+                If ds.Tables(0).Rows.Count > 0 Then
+                    If Convert.ToString(ds.Tables(0).Rows(0)("FlagAutoExport")) = "1" Then
+                        If Convert.ToDateTime(ds.Tables(0).Rows(0)("AutoExportTime")).ToString("HH:mm") = Now.ToString("HH:mm") Then
+                            If Not System.Convert.ToString(ds.Tables(0).Rows(0)("AutoExportFileExtn")) = "" Then
+                                'CreateExport(Now.ToString("ddMMyyyyHHmm") + System.Convert.ToString(ds.Tables(0).Rows(0)("AutoExportFileExtn")))
+                                CreateExport(Now.ToString("ddMMyyyyHHmm"))
+                            Else
+                                CreateExport(Now.ToString("ddMMyyyyHHmm") + ".txt")
+                            End If
+                        End If
+                    End If
+                End If
+
+            End If
+        End If
+    End Sub
+
+    Private Shared Sub CreateExport(ByVal strFileName As String)
+        Dim condition As String = "", expd As String = "", expt As String = "", qty As String = "", rec As String = ""
+        Dim no As Integer = 0, expqty As Double
+        Dim expdatetime As DateTime
+
+        Try
+            Dim GenFun As New GeneralFunctions
+            Dim GenDAL As New GeneralizedDAL
+            'parameter contains the field names in which we want to add export transaction.
+            'this is required to pass in InsertRecord srored procedure
+            Dim parameter As String = "sentry,number,date,[time],pump,product,quantity,miles,milehour,[option],vkey,pkey,vehicle,"
+            parameter = parameter & "vehtext,personnel,fname,lname,mid,licno,licst,partcd,merch,cost,surchrg,cpg,dept,"
+            parameter = parameter & "subdept,tank,prev_miles,hours,prevhours,mpg,veh_type,pm,downloaded,errors,deptcode,"
+            parameter = parameter & "vehscode,tankcode,sentcode,prodcode,acct_id,card_id,vacct_id,VIN"
+            'First delete existing records from datadwn table
+            DeleteRecord()
+            'Call usp_tt_TranslateExportRec to get the records that fit the specified criteria from txtn,vehs,
+            Dim ds As DataSet = GenDAL.ExecuteStoredProcedureGetDataSet("usp_tt_TranslateExportRec_Auto")
+            'Get the rows selected for transaction from the result of stored procedure usp_tt_TranslateExportRec_Auto
+            'one by one, format the fields and insert in the datadwn table.
+            If Not ds Is Nothing Then
+                If ds.Tables.Count > 0 Then
+                    For i As Integer = 0 To ds.Tables(0).Rows.Count
+                        'create string to be inserted in datadwn table
+                        no = no + 1
+                        rec = "'" & ds.Tables(0).Rows(i)("sentry").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("number").ToString().Trim()
+                        If expd = "" Then rec = rec & "00000','" Else rec = expd & "','"
+
+                        If IsDBNull(ds.Tables(0).Rows(i)("datetime").ToString()) = True Then
+                            expdatetime = Now
+                        Else
+                            expdatetime = Convert.ToDateTime(ds.Tables(0).Rows(i)("datetime").ToString().Trim())
+                        End If
+                        expd = expdatetime.Month.ToString().PadLeft(2, "0") & expdatetime.Day.ToString().PadLeft(2, "0") & expdatetime.Year.ToString()
+                        expt = expdatetime.Hour.ToString().PadLeft(2, "0") & expdatetime.Minute.ToString().PadLeft(2, "0")
+                        rec = rec & expd & "','" & expt & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("pump").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("product").ToString().Trim() & "','"
+                        'expqty = Convert.ToDouble(Val(ds.Tables(0).Rows(i)("quantity").ToString()))
+                        expqty = Double.Parse(ds.Tables(0).Rows(i)("quantity").ToString())
+                        qty = expqty.ToString("0.0")
+                        'Commented by Jatin for Merietta Client as on 03-Jan-2013
+                        If (qty.IndexOf(".") > 0) Then qty = qty.Remove(qty.IndexOf("."), 1)
+                        qty = qty.PadLeft(6, "0")
+                        rec = rec & qty & "','"
+
+                        expd = ds.Tables(0).Rows(i)("miles").ToString().Trim()
+                        If expd = "" Then rec = rec & "0','" Else rec = expd & "','"
+
+                        'rec = rec & ds.Tables(0).Rows(i)("miles").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("milehours").ToString().Trim()
+                        If expd = "" Then rec = rec & "0','" Else rec = expd & "','"
+                        'rec = rec & ds.Tables(0).Rows(i)("milehours").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("option").ToString().Trim()
+                        If expd = "" Then rec = rec & "None','" Else rec = expd & "','"
+                        'rec = rec & ds.Tables(0).Rows(i)("option").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("vkey").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("pkey").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("vehicle").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("VEHTEXT").ToString().Trim().Replace("'", " ") & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("personnel").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("fname").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("lname").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("mid").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("LICNO").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("LICST").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("partcd").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("merch").ToString().Trim()
+                        If expd = "" Then rec = rec & "None','" Else rec = expd & "','"
+                        'rec = rec & ds.Tables(0).Rows(i)("merch").ToString().Trim() & "','"
+                        If IsDBNull(ds.Tables(0).Rows(i)("cost")) = True Then
+                            expqty = 0
+                        Else
+                            expqty = Convert.ToDouble(Val(ds.Tables(0).Rows(i)("cost")).ToString())
+                        End If
+                        expqty = IIf(Convert.IsDBNull(ds.Tables(0).Rows(i)("cost")) = True, expqty = 0, Convert.ToDouble(Val(ds.Tables(0).Rows(i)("cost")).ToString()))
+                        qty = expqty.ToString().Trim()
+                        If (qty.IndexOf(".") > 0) Then qty = qty.Remove(qty.IndexOf("."), 1)
+                        qty = qty.PadLeft(6, "0")
+                        rec = rec & qty & "','"
+                        If IsDBNull(ds.Tables(0).Rows(i)("surcharge")) = True Then
+                            expqty = 0
+                        Else
+                            expqty = Convert.ToDouble(Val(ds.Tables(0).Rows(i)("surcharge")).ToString())
+                        End If
+                        'expqty = IIf(Convert.IsDBNull(ds.Tables(0).Rows(i)("surcharge")) = True, expqty = 0, Convert.ToDouble(Val(ds.Tables(0).Rows(i)("surcharge")).ToString()))
+                        qty = expqty.ToString().Trim()
+                        If (qty.IndexOf(".") > 0) Then qty = qty.Remove(qty.IndexOf("."), 1)
+                        qty = qty.PadLeft(15, "0")
+
+                        rec = rec & qty & "','"
+                        qty = ds.Tables(0).Rows(i)("cpg").ToString().Trim()
+                        If (qty.IndexOf(".") > 0) Then qty = qty.Remove(qty.IndexOf("."), 1)
+                        qty = qty.PadRight(4, "0")
+
+                        'rec = rec & ds.Tables(0).Rows(i)("cpg").ToString().Trim() & "','"
+                        rec = rec & qty.ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("dept").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("SUBDEPT").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("TANK").ToString().Trim()
+                        If expd = "" Then rec = rec & "000','" Else rec = expd & "','"
+                        'rec = rec & ds.Tables(0).Rows(i)("TANK").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("prev_miles").ToString().Trim()
+                        If expd = "" Then rec = rec & "0','" Else rec = expd & "','"
+                        'rec = rec & ds.Tables(0).Rows(i)("prev_miles").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("hours").ToString().Trim()
+                        If expd = "" Then rec = rec & "0','" Else rec = expd & "','"
+                        'rec = rec & ds.Tables(0).Rows(i)("hours").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("prevhours").ToString().Trim()
+                        If expd = "" Then rec = rec & "0','" Else rec = expd & "','"
+                        'rec = rec & ds.Tables(0).Rows(i)("prevhours").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("mpg").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("VEHTYPE").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("pm").ToString().Trim() & "','"
+                        expd = ds.Tables(0).Rows(i)("downloaded").ToString().Trim()
+                        If expd = "" Then rec = rec & "0','" Else rec = expd & "','"
+                        'rec = rec & ds.Tables(0).Rows(i)("downloaded").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("errors").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("DEPTCODE").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("VEHSCODE").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("TANKCODE").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("sentcode").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("prodcode").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("acct_id").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("card_id").ToString().Trim() & "','"
+                        rec = rec & ds.Tables(0).Rows(i)("vacct_id").ToString().Trim() & "','"
+                        'Added By varun Moota New Fields in Export Table.07/22/2010
+                        rec = rec & ds.Tables(0).Rows(i)("VIN").ToString().Trim() & "'"
+                        'ALTER TABLE Datadwn 
+                        'ALTER COLUMN card_id  nvarchar (7);
+                        'Insert this record into datadwn table
+                        InsertRecord("Datadwn", parameter, rec)
+                        'Session("RecordCount") = no
+                    Next
+                End If
+                'Export records from datadwn to data file
+                ExportData(strFileName)
+                'Update the txtn table and increase value of downloaded field by 1.
+                no = GenDAL.ExecuteStoredProcedureGetInteger("usp_tt_Export_UpdateTXTN_Auto")
+            End If
+        Catch ex As Exception
+            Dim cr As New ErrorPage
+            Dim errmsg As String
+            cr.errorlog("TimerStarter_btnCreateExport_Click", ex)
+            If (ex.Message.Contains(";")) Then
+                errmsg = ex.Message.ToString()
+                errmsg = errmsg.Substring(0, errmsg.IndexOf(";"))
+            ElseIf ex.Message.Contains(vbCrLf) Then
+                errmsg = ex.Message.Replace(vbCrLf.ToString(), "")
+            Else
+                errmsg = ex.Message.ToString()
+            End If
+        End Try
+    End Sub
+
+    Private Shared Sub DeleteRecord()
+        'Delete all records from Datadwn table
+        Dim GenDAL As New GeneralizedDAL
+        Try
+            Dim i As Integer = GenDAL.ExecuteNonQuery("Delete from Datadwn")
+        Catch ex As Exception
+            Dim cr As New ErrorPage
+            Dim errmsg As String
+            cr.errorlog("TimerStarter_DeleteRecord", ex)
+            If (ex.Message.Contains(";")) Then
+                errmsg = ex.Message.ToString()
+                errmsg = errmsg.Substring(0, errmsg.IndexOf(";"))
+            ElseIf ex.Message.Contains(vbCrLf) Then
+                errmsg = ex.Message.Replace(vbCrLf.ToString(), "")
+            Else
+                errmsg = ex.Message.ToString()
+            End If
+        End Try
+    End Sub
+
+    Private Shared Sub InsertRecord(ByVal tablename As String, ByVal param As String, ByVal value As String)
+        'Insert the transactions details to be exported in datadwn table
+        Dim GenDAL As New GeneralizedDAL
+        Try
+            Dim parcollection(2) As SqlParameter
+            'TableName
+            Dim Par = New SqlParameter("@TableName", SqlDbType.NVarChar)
+            Par.Direction = ParameterDirection.Input
+            Par.Value = tablename
+            parcollection(0) = Par
+            'ParameterName
+            Par = New SqlParameter("@ParameterName", SqlDbType.NVarChar)
+            Par.Direction = ParameterDirection.Input
+            Par.Value = param
+            parcollection(1) = Par
+            'Values
+            Par = New SqlParameter("@Values", SqlDbType.NVarChar)
+            Par.Direction = ParameterDirection.Input
+            Par.Value = value
+            parcollection(2) = Par
+
+            Dim i As Integer = GenDAL.ExecuteStoredProcedureGetInteger("usp_tt_InsertRecords", parcollection)
+
+        Catch ex As Exception
+            Dim cr As New ErrorPage
+            Dim errmsg As String
+            cr.errorlog("TimerStarter_InsertRecord", ex)
+            If (ex.Message.Contains(";")) Then
+                errmsg = ex.Message.ToString()
+                errmsg = errmsg.Substring(0, errmsg.IndexOf(";"))
+            ElseIf ex.Message.Contains(vbCrLf) Then
+                errmsg = ex.Message.Replace(vbCrLf.ToString(), "")
+            Else
+                errmsg = ex.Message.ToString()
+            End If
+        End Try
+    End Sub
+
+    Private Shared Sub ExportData(ByVal strFileName As String)
+        'For exporting fields from datadwn to data file
+        'Select the field names that are to be exported from translate table.
+        Dim fields As String = "", path
+        'Create file for export
+        Dim sw As StreamWriter, fs As FileStream
+        Dim GenDAL As New GeneralizedDAL
+        Try
+            'Added By Varun 
+            Dim expoNum As Int32 = 1
+            Dim parcollection(0) As SqlParameter
+            'TableName
+            Dim Par = New SqlParameter("@ExpoNum", SqlDbType.NVarChar)
+            Par.Direction = ParameterDirection.Input
+            Par.Value = expoNum
+            parcollection(0) = Par
+            Dim sqlRdr As SqlDataReader = GenDAL.ExecuteStoredProcedureGetDataReader("usp_tt_GetExportFields", parcollection)
+
+            If (sqlRdr.HasRows = True) Then
+                While (sqlRdr.Read())
+                    If (sqlRdr("field_strg").ToString().Trim().ToUpper() = "CRLF") Then
+                        fields = fields & "'" & sqlRdr("field_strg") & "' as newline,"
+                    Else
+                        fields = fields & sqlRdr("field_strg").ToString().Trim() & " as [" & sqlRdr("field_name").ToString().Trim() & "],"
+                    End If
+                End While
+            End If
+            fields = fields.Substring(0, fields.LastIndexOf(","))
+            sqlRdr.Close()
+            sqlRdr.Dispose()
+            'Create file for export
+            Dim fieldval As String = ""
+            'Select the records from datadwn table in the format specified in translation table.
+            'for this pass the above generated string to SP_SelectExportRec stored procedure.
+            Par = New SqlParameter("@FieldList", SqlDbType.NVarChar)
+            Par.Direction = ParameterDirection.Input
+            Par.Value = fields
+            parcollection(0) = Par
+            sqlRdr = GenDAL.ExecuteStoredProcedureGetDataReader("usp_tt_SelectExportRec", parcollection)
+
+            If (sqlRdr.HasRows = True) Then
+                'path = HttpContext.Current.Server.MapPath("AutoExportTXTN\Data")
+                path = HttpContext.Current.Server.MapPath("AutoExportTXTN\Data")
+                path += strFileName
+                fs = New FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None)
+                sw = New StreamWriter(fs)
+                While (sqlRdr.Read())
+                    'Enter the data selected from datadwn in the file specified in file name text box.
+                    For i As Integer = 0 To sqlRdr.FieldCount - 1
+                        'If newline character, add line break in the file.
+                        If (sqlRdr(i).ToString().Trim().ToUpper() = "CRLF") Then
+                            sw.WriteLine()
+                        ElseIf (sqlRdr(i).ToString().Trim() = "") Then
+                            'Format the field according to fill character in translate table.
+                            '16 Nov 2007                            'Harshada Mutalik.
+                            fieldval = FormatField(sqlRdr.GetName(i), sqlRdr(i).ToString())
+                            'insert the formatted string in datafile
+                            sw.Write(fieldval)
+                        Else
+                            'Format the field according to fill character in translate table.
+                            '16 Nov 2007                            'Harshada Mutalik.
+                            fieldval = FormatField(sqlRdr.GetName(i), sqlRdr(i).ToString())
+                            'insert the formatted string in datafile
+                            sw.Write(fieldval)
+                        End If
+                    Next
+                End While
+            End If
+        Catch ex As Exception
+            Dim cr As New ErrorPage
+            Dim errmsg As String
+            cr.errorlog("TimerStarter_ExportData", ex)
+            If (ex.Message.Contains(";")) Then
+                errmsg = ex.Message.ToString()
+                errmsg = errmsg.Substring(0, errmsg.IndexOf(";"))
+            ElseIf ex.Message.Contains(vbCrLf) Then
+                errmsg = ex.Message.Replace(vbCrLf.ToString(), "")
+            Else
+                errmsg = ex.Message.ToString()
+            End If
+        Finally
+            sw.Flush()
+            sw.Close()
+            fs.Close()
+        End Try
+    End Sub
+
+    Private Shared Function FormatField(ByVal fieldname As String, ByVal fieldval As String) As String
+        'This function is used to fill the fieldvalue with fill character specified in translation table.
+        'If no fill character is specified, fieldvalue will be padded with space.
+        Dim GenDAL As New GeneralizedDAL
+        Try
+            Dim sdr As SqlDataReader = GenDAL.GetDataReader("Select n_length,fillchar,startpos from translate where field_name='" & fieldname & "'")
+            If (sdr.HasRows) Then
+                sdr.Read()
+                If ((sdr("startpos").ToString().Trim().ToUpper() = "LEFT") Or (sdr("startpos").ToString().Trim().ToUpper() = "ALL")) Then
+                    'fieldval = fieldval.PadLeft(Convert.ToInt32(Val(sdr("n_length")).ToString()), sdr("fillchar").ToString())
+                    'Added By Varun Moota.
+                    Dim iLength As Int32 = Convert.ToInt32(Double.Parse(sdr("n_length")))
+                    Dim pad As Char
+                    pad = Convert.ToChar("0")
+                    fieldval = fieldval.Trim.PadLeft(iLength, pad)
+                ElseIf (sdr("startpos").ToString().Trim().ToUpper() = "RIGHT") Then
+                    fieldval = fieldval.PadLeft(Convert.ToInt32(Val(sdr("n_length").ToString())), sdr("fillchar").ToString())
+                End If
+            End If
+            sdr.Close()
+        Catch ex As Exception
+            Dim cr As New ErrorPage
+            Dim errmsg As String
+            cr.errorlog("TimerStarter_FormatField", ex)
+            If (ex.Message.Contains(";")) Then
+                errmsg = ex.Message.ToString()
+                errmsg = errmsg.Substring(0, errmsg.IndexOf(";"))
+            ElseIf ex.Message.Contains(vbCrLf) Then
+                errmsg = ex.Message.Replace(vbCrLf.ToString(), "")
+            Else
+                errmsg = ex.Message.ToString()
+            End If
+        End Try
+        Return fieldval
+    End Function
+End Class

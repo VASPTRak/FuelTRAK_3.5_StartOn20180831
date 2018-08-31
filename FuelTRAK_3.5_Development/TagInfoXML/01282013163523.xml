@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ID>493</ID>
+    <Tag_ID>1</Tag_ID>
+    <Sys_Nbr>0001</Sys_Nbr>
+    <Date_Added>2013-01-25T16:35:19.787+05:30</Date_Added>
+    <Miles>0</Miles>
+    <Hours>0</Hours>
+    <Limit>none</Limit>
+    <Fuels>NNNNNNNN</Fuels>
+    <Power>6</Power>
+    <Clicks>1609000</Clicks>
+    <Tag_Mode>Car Chip</Tag_Mode>
+    <Ignition_State>n/a</Ignition_State>
+    <MachineName>transtech95.transtech.com</MachineName>
+    <ProgrammedBy>Accesscode</ProgrammedBy>
+    <Vehicle_Make />
+    <Vehicle_Model />
+    <Vehicle_Year>2000</Vehicle_Year>
+    <Vehicle_Product />
+    <Calib_Miles>12</Calib_Miles>
+    <Calib_Completed />
+    <OBDII_Interface />
+    <InstalledBy />
+    <Mileage_Confirm />
+    <Tag_Install_LOC />
+    <Interface_Install_LOC />
+    <Space_Under_Tag />
+    <ECM_LOC />
+    <ECM_Conn_Type />
+    <Avg_Signal>-1</Avg_Signal>
+    <Tag_Hex_Date />
+    <PID31_Exists>false</PID31_Exists>
+    <Comments />
+    <ChkECM>false</ChkECM>
+    <SyncFlag>true</SyncFlag>
+    <MechanicalOdometer>12</MechanicalOdometer>
+  </Table>
+</NewDataSet>

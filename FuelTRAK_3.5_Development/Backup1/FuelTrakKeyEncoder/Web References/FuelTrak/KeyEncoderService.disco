@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://www.trakeng.com/FTLCS/Services/KeyEncoderService.asmx?wsdl" docRef="http://www.trakeng.com/FTLCS/Services/KeyEncoderService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.trakeng.com/FTLCS/Services/KeyEncoderService.asmx" xmlns:q1="http://trakeng.com/" binding="q1:KeyEncoderServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://www.trakeng.com/FTLCS/Services/KeyEncoderService.asmx" xmlns:q2="http://trakeng.com/" binding="q2:KeyEncoderServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

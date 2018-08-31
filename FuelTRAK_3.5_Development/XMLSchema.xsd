@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XMLSchema" targetNamespace="http://tempuri.org/XMLSchema.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TXTNREPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="TANK" type="xs:string" />
+        <xs:element name="PM" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:decimal" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="MILES" type="xs:decimal" />
+        <xs:element name="PREV_MILES" type="xs:decimal" />
+        <xs:element name="HOURS" type="xs:decimal" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string"/>
+        
+        <xs:element name="_x005B_OPTION_x005D_" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PERSREPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDENTITY" type="xs:string" />
+        <xs:element name="PERNAME" type="xs:string" />
+        <xs:element name="DATE_ADDED" type="xs:dateTime" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SITEANALYSISREPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="TotalQTY" type="xs:float" />
+        <xs:element name="Name" type="xs:string" />
+        <xs:element name="ZeroQTYTxtns" type="xs:float" />
+        <xs:element name="LQTYTxtns" type="xs:float" />
+        <xs:element name="HQTYTxtns" type="xs:float" />
+        <xs:element name="AvgQTY " type="xs:float" />
+        <xs:element name="TotalTxtns" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VEHSREPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDENTITY" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="TYPE" type="xs:string" />
+        <xs:element name="MILEAGE" type="xs:string" />
+        <xs:element name="LASTFUELER" type="xs:string" />
+        <xs:element name="LASTFUELDT" type="xs:dateTime" />
+        <xs:element name="VEHYEAR" type="xs:string" />
+        <xs:element name="VEHMAKE" type="xs:string" />
+        <xs:element name="VEHMODEL" type="xs:string" />
+        <xs:element name="LICNO" type="xs:string" />
+        <xs:element name="VEHVIN" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="FUELS" type="xs:string" />
+        <xs:element name="CURRMILES" type="xs:float" />
+        <xs:element name="CURRHOURS" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VEHSREPORT_FUELUSE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="QTY" type="xs:float" />
+        <xs:element name="NUMBER" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FUELUSEREPORT_BYVEHICLE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="MILES" type="xs:float" />
+        <xs:element name="QTY" type="xs:float" />
+        <xs:element name="MPG" type="xs:float" />
+        <xs:element name="COST" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FUELUSEREPORT_BYPERSONNEL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="PUMP" type="xs:integer" />
+        <xs:element name="PRODUCT" type="xs:integer" />
+        <xs:element name="QUANTITY" type="xs:decimal" />
+        <xs:element name="MILES" type="xs:decimal" />
+        <xs:element name="PREV_MILES" type="xs:decimal" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="COST" type="xs:float" />
+        <xs:element name="NAME" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--<xs:element name="FUELUSEREPORT_BYDEPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="MILES" type="xs:float" />
+        <xs:element name="QTY" type="xs:float" />
+        <xs:element name="MPG" type="xs:float" />
+        <xs:element name="COST" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>-->
+  <!--<xs:element name="FUELUSEREPORT_BYDEPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Sentry" type="xs:string" />
+        <xs:element name="DeptName" type="xs:string" />
+        <xs:element name="Product" type="xs:string" />
+        <xs:element name="QTY" type="xs:float" />
+        <xs:element name="Number" type="xs:string" />
+        <xs:element name="ProdName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>-->
+  <xs:element name="FUELUSEREPORT_BYDEPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Sentry" type="xs:string" />
+        <xs:element name="Product" type="xs:string" />
+        <xs:element name="QTY" type="xs:float" />
+        <xs:element name="Dept" type="xs:string" />
+        <xs:element name="ProdName" type="xs:string" />
+        <xs:element name="DeptName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SENTRYREPORT_TOTALSONLY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="PUMP" type="xs:integer" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:float" />
+        <xs:element name="COST" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SentryDateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TXTn_x0023_" type="xs:string" />
+        <xs:element name="Date" type="xs:dateTime" />
+        <xs:element name="HS" type="xs:string" />
+        <xs:element name="PD" type="xs:string" />
+        <xs:element name="QTY" type="xs:float" />
+        <xs:element name="Miles" type="xs:float" />
+        <xs:element name="PREV_MILES" type="xs:float" />
+        <xs:element name="Prev" type="xs:float" />
+        <xs:element name="Hours" type="xs:float" />
+        <xs:element name="Error" type="xs:string" />
+        <xs:element name="Vehicle" type="xs:string" />
+        <xs:element name="MPG" type="xs:float" />
+        <xs:element name="cost" type="xs:float" />
+        <xs:element name="VKey" type="xs:string" />
+        <xs:element name="Pkey" type="xs:string" />
+        <xs:element name="Personnel" type="xs:string" />
+        <xs:element name="Option" type="xs:string" />
+        <xs:element name="Name" type="xs:string" />
+        <xs:element name="NUMBER" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TankReconciliationNoDipping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TankNo" type="xs:string" />
+        <xs:element name="TankName" type="xs:string" />
+        <xs:element name="Product" type="xs:string" />
+        <xs:element name="StartBal" type="xs:float" />
+        <xs:element name="EndBal" type="xs:float" />
+        <xs:element name="DelBal" type="xs:float" />
+        <xs:element name="TRAKCnt" type="xs:float" />
+        <xs:element name="dtStartDT" type="xs:dateTime" />
+        <xs:element name="dtEndDT" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PerList_IDOrder_LastNameOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDENTITY" type="xs:string" />
+        <xs:element name="Last_Name" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="DATE_ADDED" type="xs:dateTime" />
+        <xs:element name="First_Name" type="xs:string">
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehListInIDOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDENTITY" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="KEY_NUMBER" type="xs:string" />
+        <xs:element name="TYPE" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="CURRMILES" type="xs:string" />
+        <xs:element name="CURRHOURS" type="xs:string" />
+        <xs:element name="LASTFUELER" type="xs:string" />
+        <xs:element name="LASTFUELDT" type="xs:dateTime" />
+        <xs:element name="VEHYEAR" type="xs:string" />
+        <xs:element name="VEHMAKE" type="xs:string" />
+        <xs:element name="VEHMODEL" type="xs:string" />
+        <xs:element name="LICNO" type="xs:string" />
+        <xs:element name="VEHVIN" type="xs:string" />
+        <xs:element name="FUEL" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehListByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDENTITY" type="xs:string" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="CARD" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="TYPE" type="xs:string" />
+        <xs:element name="MorH_Value" type="xs:float" />
+        <xs:element name="MorH" type="xs:string" />
+        <xs:element name="LASTFUELER" type="xs:string" />
+        <xs:element name="LASTFUELDT" type="xs:dateTime" />
+        <xs:element name="DATE_ADDED" type="xs:dateTime" />
+        <xs:element name="FUEL" type="xs:string" />
+        <xs:element name="VEHYEAR" type="xs:string" />
+        <xs:element name="VEHMAKE" type="xs:string" />
+        <xs:element name="VEHMODEL" type="xs:string" />
+        <xs:element name="LICNO" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehListOfPMDueReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDENTITY" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="CurrentMileage" type="xs:integer" />
+        <xs:element name="PMDueMileage" type="xs:integer" />
+        <xs:element name="Interval" type="xs:integer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehListFACalibration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VehID" type="xs:string" />
+        <xs:element name="VehDesc" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="TYPE" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="LatestMiles" type="xs:integer" />
+        <xs:element name="LatestHours" type="xs:integer" />
+        <xs:element name="DATE_ADDED" type="xs:dateTime" />
+        <xs:element name="FUELS" type="xs:string" />
+        <xs:element name="SCALE" type="xs:string" />
+        <xs:element name="CPM1" type="xs:string" />
+        <xs:element name="CPM2" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehListHistorySummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="TYPE" type="xs:string" />
+        <xs:element name="MHFLAG" type="xs:string" />
+        <xs:element name="TotalGallon" type="xs:float" />
+        <xs:element name="TotalCost" type="xs:float" />
+        <xs:element name="TotalMiles" type="xs:float" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="LASTFUELER" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="MPG" type="xs:float" />
+        <xs:element name="LASTFUELDT" type="xs:dateTime" />
+        <xs:element name="LastFuelerName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleThatHaveNotFueled">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDENTITY" type="xs:string" />
+        <xs:element name="YEAR_Extension" type="xs:string" />
+        <xs:element name="LASTFUELDT" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_Departments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="Name" type="xs:string" />
+        <xs:element name="Address" type="xs:string" />
+        <xs:element name="SURCHARGE" type="xs:float" />
+        <xs:element name="CODE" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_SiteInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="ADDRESS" type="xs:string" />
+        <xs:element name="PHONENO" type="xs:string" />
+        <xs:element name="BAUD" type="xs:long" />
+        <xs:element name="PUMP1_TANK" type="xs:string" />
+        <xs:element name="Product1" type="xs:string" />
+        <xs:element name="Prim1" type="xs:string" />
+        <xs:element name="PUMP2_TANK" type="xs:string" />
+        <xs:element name="Product2" type="xs:string" />
+        <xs:element name="Prim2" type="xs:string" />
+        <xs:element name="PUMP3_TANK" type="xs:string" />
+        <xs:element name="Product3" type="xs:string" />
+        <xs:element name="Prim3" type="xs:string" />
+        <xs:element name="PUMP4_TANK" type="xs:string" />
+        <xs:element name="Product4" type="xs:string" />
+        <xs:element name="Prim4" type="xs:string" />
+        <xs:element name="PUMP5_TANK" type="xs:string" />
+        <xs:element name="Product5" type="xs:string" />
+        <xs:element name="Prim5" type="xs:string" />
+        <xs:element name="PUMP6_TANK" type="xs:string" />
+        <xs:element name="Product6" type="xs:string" />
+        <xs:element name="Prim6" type="xs:string" />
+        <xs:element name="PUMP7_TANK" type="xs:string" />
+        <xs:element name="Product7" type="xs:string" />
+        <xs:element name="Prim7" type="xs:string" />
+        <xs:element name="PUMP8_TANK" type="xs:string" />
+        <xs:element name="Product8" type="xs:string" />
+        <xs:element name="Prim8" type="xs:string" />
+        <xs:element name="OPCODE" type="xs:string" />
+        <xs:element name="ENTRYTIME" type="xs:string" />
+        <xs:element name="PUMPON" type="xs:string" />
+        <xs:element name="PUMPOFF" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscListingTanks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="Product" type="xs:string" />
+        <xs:element name="BALANCE" type="xs:float" />
+        <xs:element name="PRSET_PRIC" type="xs:float" />
+        <xs:element name="TanksValue" type="xs:float" />
+        <xs:element name="AmtReqToFill" type="xs:float" />
+        <xs:element name="TANK_SIZE" type="xs:float" />
+        <xs:element name="CurrentAsOf" type="xs:dateTime" />
+        <xs:element name="REFILL_NOT" type="xs:float" />
+        <xs:element name="TM_NUMBER_TM_PROBE" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="TANK" type="xs:string" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:decimal" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="MILES" type="xs:integer" />
+        <xs:element name="PREV_MILES" type="xs:integer" />
+        <xs:element name="HOURS" type="xs:integer" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="Option" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="ACCT_ID" type="xs:string" />
+        <xs:element name="COST" type="xs:integer" />
+        <xs:element name="PREVHOURS" type="xs:integer" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="DEPTNAME" type="xs:string" />
+        <!--<xs:element name="PERSNAME" type="xs:string" />-->
+        <xs:element name="LAST_NAME" type="xs:string" />
+        <xs:element name="FIRST_NAME" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="VTYPE" type="xs:string" />
+        <xs:element name="TXTNType" type="xs:string" />
+        <xs:element name="Cal_Miles" type="xs:integer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionReportByDept">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="TANK" type="xs:string" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:decimal" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="MILES" type="xs:integer" />
+        <xs:element name="PREV_MILES" type="xs:integer" />
+        <xs:element name="HOURS" type="xs:integer" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="Option" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="ACCT_ID" type="xs:string" />
+        <xs:element name="COST" type="xs:integer" />
+        <xs:element name="PREVHOURS" type="xs:integer" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="DEPTNAME" type="xs:string" />
+        <xs:element name="PERSNAME" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="VTYPE" type="xs:string" />
+        <xs:element name="TXTNType" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--<xs:element name="MainBilling_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="TANK" type="xs:string" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:decimal" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="MILES" type="xs:integer" />
+        <xs:element name="PREV_MILES" type="xs:integer" />
+        <xs:element name="HOURS" type="xs:integer" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="Option" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="ACCT_ID" type="xs:string" />
+        <xs:element name="COST" type="xs:integer" />
+        <xs:element name="PREVHOURS" type="xs:integer" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="DEPTNAME" type="xs:string" />
+        
+        <xs:element name="LAST_NAME" type="xs:string" />
+        <xs:element name="FIRST_NAME" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="VTYPE" type="xs:string" />
+        <xs:element name="TXTNType" type="xs:string" />
+        <xs:element name="Cal_Miles" type="xs:integer" />
+        <xs:element name="SURCHARGEPERGALLON" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>-->
+  <xs:element name="MainBilling_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:float" />
+        <xs:element name="MILES" type="xs:decimal" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="LICNO" type="xs:string" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="ACCT_ID" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="COST" type="xs:float" />
+        <xs:element name="PREV_MILES" type="xs:decimal" />
+        <xs:element name="HOURS" type="xs:decimal" />
+        <xs:element name="PREVHOURS" type="xs:decimal" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="DEPTNAME" type="xs:string" />
+        <xs:element name="PERSNAME" type="xs:string" />
+        <xs:element name="ProdName" type="xs:string" />
+        <xs:element name="Number" type="xs:decimal" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="OPTION" type="xs:string" />
+        <xs:element name="MPG" type="xs:float" />
+        <xs:element name="SURCHARGE" type="xs:float" />
+        <xs:element name="SURCHARGEPERGALLON" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainBilling_REPORT_Prod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="ProdName" type="xs:string" />
+        <xs:element name="TQTY" type="xs:float" />
+        <xs:element name="TCOST" type="xs:float" />
+        <xs:element name="MILES" type="xs:decimal" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="SURCHARGE" type="xs:float" />
+        <xs:element name="SURCHARGEPERGALLON" type="xs:float" />
+        
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FUELUSEDEPT_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datetime" type="xs:dateTime" />
+        <xs:element name="vehicle" type="xs:string" />
+        <xs:element name="quantity" type="xs:float" />
+        <xs:element name="product" type="xs:string" />
+        <xs:element name="cost" type="xs:float" />
+        <xs:element name="identity" type="xs:string" />
+        <xs:element name="extension" type="xs:string" />
+        <xs:element name="dept" type="xs:string" />
+        <xs:element name="prodname" type="xs:string" />
+        <xs:element name="deptname" type="xs:string" />
+        <xs:element name="LICNO" type="xs:string" />
+        <xs:element name="MILES" type="xs:decimal" />
+        <xs:element name="MPG" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleTroubleCode_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VehicleId" type="xs:string" />
+        <xs:element name="TransactionNumber" type="xs:string" />
+        <xs:element name="Sentry" type="xs:string" />
+        <xs:element name="Make" type="xs:string" />
+        <xs:element name="OBDIIMake" type="xs:string" />
+        <xs:element name="PCode" type="xs:string" />
+        <xs:element name="Description" type="xs:string" />
+        <xs:element name="TroubleCodeRecordedTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleOBDIITroubleCode_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VehicleId" type="xs:string" />
+        <xs:element name="TransactionNumber" type="xs:string" />
+        <xs:element name="Sentry" type="xs:string" />
+        <xs:element name="Make" type="xs:string" />
+        <xs:element name="OBDIIMake" type="xs:string" />
+        <xs:element name="PCode" type="xs:string" />
+        <xs:element name="Description" type="xs:string" />
+        <xs:element name="Calc" type="xs:string" />
+        <xs:element name="TroubleCodeRecordedTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleOBDIIZ_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VehicleId" type="xs:string" />
+        <xs:element name="TXTN" type="xs:string" />
+        <xs:element name="Sentry" type="xs:string" />
+        <xs:element name="DT" type="xs:dateTime" />
+        <xs:element name="Max_Fuel_Press" type="xs:string" />
+        <xs:element name="Max_Manifold" type="xs:string" />
+        <xs:element name="Max_Air_Intake" type="xs:string" />
+        <xs:element name="Max_Eng_Temp" type="xs:string" />
+        <xs:element name="Max_Throttle_Pos" type="xs:string" />
+        <xs:element name="Max_Eng_Speed_Hi" type="xs:string" />
+        <xs:element name="Max_Eng_Speed_Lo" type="xs:string" />
+        <xs:element name="Max_Veh_Speed" type="xs:string" />
+        <xs:element name="Max_Eng_Oil_Press" type="xs:string" />
+        <xs:element name="Max_Per_Eng_load" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WrightExpressBillingReport_Header">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="FIRST_NAME" type="xs:string" />
+        <xs:element name="LAST_NAME" type="xs:string" />
+        <xs:element name="MILES" type="xs:float" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:float" />
+        <xs:element name="COST" type="xs:float" />
+        <xs:element name="TCost" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WrightExpressBillingReport_Footer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="ADDRESS" type="xs:string" />
+        <xs:element name="STATE" type="xs:string" />
+        <xs:element name="City" type="xs:string" />
+        <xs:element name="Zip" type="xs:string" />
+        <xs:element name="TCount" type="xs:float" />
+        <xs:element name="TAmt" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SentryVehOrd_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="RECORD" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:float" />
+        <xs:element name="MILES" type="xs:decimal" />
+        <xs:element name="PREV_Miles" type="xs:decimal" />
+        <xs:element name="HOURS" type="xs:decimal" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="MPG" type="xs:float" />
+        <xs:element name="COST" type="xs:float" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="OPTION" type="xs:string" />
+        <xs:element name="identity" type="xs:string" />
+        <xs:element name="PERSNAME" type="xs:string" />
+        <xs:element name="prodname" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SentryDateTime_REPORT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="number" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="RECORD" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:float" />
+        <xs:element name="MILES" type="xs:decimal" />
+        <xs:element name="PREV_MILES" type="xs:float" />
+        <xs:element name="PREVHOURS" type="xs:decimal" />
+        <xs:element name="HOURS" type="xs:decimal" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="MPG" type="xs:string" />
+        <xs:element name="COST" type="xs:float" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="OPTION" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="PERSNAME" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TankBalanceReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Tank_Number" type="xs:string" />
+        <xs:element name="Tank_Name" type="xs:string" />
+        <xs:element name="tank_size" type="xs:integer" />
+        <xs:element name="prset_pric" type="xs:decimal" />
+        <xs:element name="product" type="xs:string" />
+        <xs:element name="Product_Name" type="xs:string" />
+        <xs:element name="balance" type="xs:integer" />
+        <xs:element name="Last_Reading" type="xs:dateTime" />
+        <xs:element name="TM_PROBE" type="xs:integer" />
+        <xs:element name="REFILL_NOT" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inventory_Activity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RECORD" type="xs:integer" />
+        <xs:element name="TANK_NBR" type="xs:string" />
+        <xs:element name="ENTRY_TYPE" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="QTY_MEAS" type="xs:integer" />
+        <xs:element name="QTY_ADDED" type="xs:integer" />
+        <xs:element name="PRICE_NEW" type="xs:integer" />
+        <xs:element name="PRICE_ADD" type="xs:integer" />
+        <xs:element name="INVOICE" type="xs:string" />
+        <xs:element name="SUPPLIER" type="xs:string" />
+        <xs:element name="EMPLOYEE" type="xs:string" />
+        <xs:element name="HEIGHT" type="xs:string" />
+        <xs:element name="PREVTNKCST" type="xs:integer" />
+        <xs:element name="NEWUPDT" type="xs:integer" />
+        <xs:element name="INVOICE_AMT" type="xs:integer" />
+        <xs:element name="NAME" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MPGDeviationReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Vehicle" type="xs:string" />
+        <xs:element type="xs:string" name="CurrMPG" />
+        <xs:element name="AVGMPG" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_LockOuts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Card" type="xs:string" />
+        <xs:element name="CardExp" type="xs:string" />
+        <xs:element name="acct_id" type="xs:string" />
+        <xs:element name="KeyNo" type="xs:string" />
+        <xs:element name="KeyExp" type="xs:string" />
+        <xs:element name="datelocked" type="xs:dateTime" />
+        <xs:element name="PersonnelID" type="xs:string" />
+        <xs:element name="VehicleID" type="xs:string" />
+        <xs:element name="KeyType" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_CurrentExportFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sentry" type="xs:string" />
+        <xs:element name="TXTNNumber" type="xs:string" />
+        <xs:element name="SDateTime" type="xs:dateTime" />
+        <xs:element name="Hose" type="xs:string" />
+        <xs:element name="Prod" type="xs:string" />
+        <xs:element name="Qty" type="xs:float" />
+        <xs:element name="Mileage" type="xs:decimal" />
+        <xs:element name="VehID" type="xs:string" />
+        <xs:element name="cost" type="xs:float" />
+        <xs:element name="vkey" type="xs:string" />
+        <xs:element name="PersID" type="xs:string" />
+        <xs:element name="SENTRYName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_CurrentExportFile_Hose">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Hose" type="xs:string" />
+        <xs:element name="SumQty" type="xs:float" />
+        <xs:element name="sentry" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_CurrentExportFile_Product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="product" type="xs:string" />
+        <xs:element name="SumQty" type="xs:float" />
+        <xs:element name="sentry" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_CurrentExportFile_Product_Summ">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="product" type="xs:string" />
+        <xs:element name="SumQty" type="xs:float" />
+        <xs:element name="SumCost" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_ExportSummReport_Dtl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_ExportSummReport_ProdSumm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="SumQty" type="xs:float" />
+        <xs:element name="SentryName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiscReportListing_ExportSummReport_TxtnCnt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="TxtnCnt" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvTankCurrentBalanceReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TankNo" type="xs:string" />
+        <xs:element name="TankName" type="xs:string" />
+        <xs:element name="Product" type="xs:string" />
+        <xs:element name="Balance" type="xs:float" />
+        <xs:element name="Height" type="xs:string" />
+        <xs:element name="Size" type="xs:int" />
+        <xs:element name="CurrentDate" type="xs:dateTime" />
+        <xs:element name="TankMonProb" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryInformationNoFuelTxtn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TankNbr" type="xs:string" />
+        <xs:element name="TankName" type="xs:string" />
+        <xs:element name="EntryType" type="xs:string" />
+        <xs:element name="Date_Time" type="xs:dateTime" />
+        <xs:element name="QTYMeas" type="xs:float" />
+        <xs:element name="QTYAdded" type="xs:float" />
+        <xs:element name="PriceAdd" type="xs:float" />
+        <xs:element name="InvoiceNo" type="xs:string" />
+        <xs:element name="Supplier" type="xs:string" />
+        <xs:element name="Employee" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvTankBalanceReport_FIFO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TankNumber" type="xs:string" />
+        <xs:element name="TankName" type="xs:string" />
+        <xs:element name="ProdName" type="xs:string" />
+        <xs:element name="TANK_SIZE" type="xs:decimal" />
+        <xs:element name="QTY_ADDED" type="xs:decimal" />
+        <xs:element name="PRICE_ADD" type="xs:decimal" />
+        <xs:element name="TotalValue" type="xs:decimal" />
+        <xs:element name="REFILL_NOT" type="xs:decimal" />
+        <xs:element name="TM_PROBE" type="xs:string" />
+        <xs:element name="QTY_REMAINING" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvPercentUsageReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Vehicle" type="xs:string" />
+        <xs:element name="STTD" type="xs:dateTime" />
+        <xs:element name="EndTD" type="xs:dateTime" />
+        <xs:element name="STMiles" type="xs:decimal" />
+        <xs:element name="EndMiles" type="xs:decimal" />
+        <xs:element name="STOption" type="xs:decimal" />
+        <xs:element name="TMiles" type="xs:decimal" />
+        <xs:element name="TOptions" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehPerformanceReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Vehicle" type="xs:string" />
+        <xs:element name="Desciption" type="xs:string" />
+        <xs:element name="TotalMiles" type="xs:decimal" />
+        <xs:element name="TotGals" type="xs:float" />
+        <xs:element name="MPG" type="xs:float" />
+        <xs:element name="TotCost" type="xs:float" />
+        <xs:element name="MorH" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportSummReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="Name" type="xs:string" />
+        <xs:element name="TQty" type="xs:decimal" />
+        <xs:element name="Ttrans" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TranslateReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="field_name" type="xs:string" />
+        <xs:element name="n_order" type="xs:decimal" />
+        <xs:element name="field_desc" type="xs:string" />
+        <xs:element name="fillchar" type="xs:string" />
+        <xs:element name="length" type="xs:decimal" />
+        <xs:element name="n_length" type="xs:decimal" />
+        <xs:element name="startpos" type="xs:string" />
+        <xs:element name="field_strg" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PumpTotalizer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SentryNo" type="xs:string" />
+        <xs:element name="SentryName" type="xs:string" />
+        <xs:element name="PumpNo" type="xs:string" />
+        <xs:element name="PumpName" type="xs:string" />
+        <xs:element name="STTD" type="xs:dateTime" />
+        <xs:element name="EndTD" type="xs:dateTime" />
+        <xs:element name="STRead" type="xs:decimal" />
+        <xs:element name="EdRead" type="xs:decimal" />
+        <xs:element name="MRead" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonnelList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LAST_NAME" type="xs:string" />
+        <xs:element name="DATE_ADDED" type="xs:dateTime" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="IDENTITY" type="xs:string" />
+        <xs:element name="FIRST_NAME" type="xs:string">
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Site_Hose">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Hose" type="xs:string" />
+        <xs:element name="TQty" type="xs:float" />
+        <xs:element name="TCost" type="xs:float" />
+        <xs:element name="Sentry" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Site_Product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Product" type="xs:string" />
+        <xs:element name="TQty" type="xs:float" />
+        <xs:element name="TCost" type="xs:float" />
+        <xs:element name="Sentry" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FuelUseByPERS_HS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Hose" type="xs:string" />
+        <xs:element name="TQty" type="xs:float" />
+        <xs:element name="TCost" type="xs:float" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FuelUseByPERS_PD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ProdName" type="xs:string" />
+        <xs:element name="TQty" type="xs:float" />
+        <xs:element name="TCost" type="xs:float" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainBilling_REPORT_TotProd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Product" type="xs:string" />
+        <xs:element name="ProdName" type="xs:string" />
+        <xs:element name="TQTY" type="xs:float" />
+        <xs:element name="TCost" type="xs:float" />
+        <xs:element name="TSurcharge" type="xs:float" />
+        <xs:element name="TSurchargePERGALLON" type="xs:float" />
+        <xs:element name="TXTXCnt" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TankRecon_Tot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DAY" type="xs:string" />
+        <xs:element name="DSP1" type="xs:float" />
+        <xs:element name="TANK_DELIVERIES" type="xs:float" />
+        <xs:element name="TANK_LEVELS" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TankRecon_Tot2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DAY" type="xs:string" />
+        <xs:element name="DSP1" type="xs:float" />
+        <xs:element name="DSP2" type="xs:float" />
+        <xs:element name="TANK_DELIVERIES" type="xs:float" />
+        <xs:element name="TANK_LEVELS" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fuel_Use_Report_VEHType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="Number" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="Quantity" type="xs:float" />
+        <xs:element name="MILES" type="xs:float" />
+        <xs:element name="PREV_MILES" type="xs:float" />
+        <xs:element name="Errors" type="xs:string" />
+        <xs:element name="VID" type="xs:string" />
+        <xs:element name="MPG" type="xs:string" />
+        <xs:element name="PID" type="xs:string" />
+        <xs:element name="OPTION" type="xs:string" />
+        <xs:element name="Type" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fuel_Use_Report_VEHDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="Number" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="Quantity" type="xs:float" />
+        <xs:element name="MILES" type="xs:float" />
+        <xs:element name="PREV_MILES" type="xs:float" />
+        <xs:element name="Errors" type="xs:string" />
+        <xs:element name="VID" type="xs:string" />
+        <xs:element name="MPG" type="xs:string" />
+        <xs:element name="PID" type="xs:string" />
+        <xs:element name="OPTION" type="xs:string" />
+        <xs:element name="LOCATION" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tank_CHART">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CHARTNUMBER" type="xs:int" />
+        <xs:element name="CHARTNAME" type="xs:string" />
+        <xs:element name="ILevel" type="xs:decimal" />
+        <xs:element name="GLevel" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fuel_Use_PersDept">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:float" />
+        <xs:element name="MILES" type="xs:decimal" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="LICNO" type="xs:string" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="ACCT_ID" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="COST" type="xs:float" />
+        <xs:element name="PREV_MILES" type="xs:decimal" />
+        <xs:element name="HOURS" type="xs:decimal" />
+        <xs:element name="PREVHOURS" type="xs:decimal" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="DEPTNAME" type="xs:string" />
+        <xs:element name="PERSNAME" type="xs:string" />
+        <xs:element name="ProdName" type="xs:string" />
+        <xs:element name="Number" type="xs:decimal" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="OPTION" type="xs:string" />
+        <xs:element name="MPG" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Vehicle_DTCList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="VehicleId" type="xs:string" />
+        <xs:element name="TXTN" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="DTCCount" type="xs:dateTime" />
+        <xs:element name="RPMStat" type="xs:string" />
+        <xs:element name="MILStat" type="xs:string" />
+        <xs:element name="MAXSpeed" type="xs:string" />
+        <xs:element name="CoolantTemp" type="xs:string" />
+        <xs:element name="HardBrakes" type="xs:string" />
+        <xs:element name="ExtremeBrakes" type="xs:dateTime" />
+        <xs:element name="AccidentLog" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PollingResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LOCATION" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="MESSAGE" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionReportMPG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SENTRY" type="xs:string" />
+        <xs:element name="NUMBER" type="xs:string" />
+        <xs:element name="DATETIME" type="xs:dateTime" />
+        <xs:element name="TANK" type="xs:string" />
+        <xs:element name="PUMP" type="xs:string" />
+        <xs:element name="PRODUCT" type="xs:string" />
+        <xs:element name="QUANTITY" type="xs:decimal" />
+        <xs:element name="VEHICLE" type="xs:string" />
+        <xs:element name="MILES" type="xs:integer" />
+        <xs:element name="PREV_MILES" type="xs:integer" />
+        <xs:element name="HOURS" type="xs:integer" />
+        <xs:element name="ERRORS" type="xs:string" />
+        <xs:element name="VKEY" type="xs:string" />
+        <xs:element name="PKEY" type="xs:string" />
+        <xs:element name="PERSONNEL" type="xs:string" />
+        <xs:element name="Option" type="xs:string" />
+        <xs:element name="CARD_ID" type="xs:string" />
+        <xs:element name="ACCT_ID" type="xs:string" />
+        <xs:element name="COST" type="xs:integer" />
+        <xs:element name="PREVHOURS" type="xs:integer" />
+        <xs:element name="EXTENSION" type="xs:string" />
+        <xs:element name="DEPT" type="xs:string" />
+        <xs:element name="DEPTNAME" type="xs:string" />
+        <xs:element name="PERSNAME" type="xs:string" />
+        <xs:element name="NAME" type="xs:string" />
+        <xs:element name="VTYPE" type="xs:string" />
+        <xs:element name="TXTNType" type="xs:string" />
+        <xs:element name="Cal_MPG" type="xs:double" />
+        <xs:element name="MPG" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

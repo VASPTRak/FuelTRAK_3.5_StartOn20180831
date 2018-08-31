@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://trakeng.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://trakeng.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://trakeng.com/">
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PingResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehicleInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vehicleId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehicleInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVehicleInformationResult" type="tns:VehicleInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VehicleInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SystemId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FuelLimit" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMaster" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequireSecondKey" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MileageEntryRequired" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="FuelTypes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mileage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MileageWindow" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPersonnelInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="personnelId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonnelInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonnelInformationResult" type="tns:PersonnelInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PersonnelInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SystemId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequireSecondKey" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVehicleKeyId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vehicleId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehicleKeyIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVehicleKeyIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonnelKeyId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="personnelId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonnelKeyIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonnelKeyIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVehicleInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVehicleInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonnelInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonnelInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonnelInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonnelInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleKeyIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVehicleKeyId" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleKeyIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVehicleKeyIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonnelKeyIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonnelKeyId" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonnelKeyIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonnelKeyIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="KeyEncoderServiceSoap">
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleInformation">
+      <wsdl:input message="tns:GetVehicleInformationSoapIn" />
+      <wsdl:output message="tns:GetVehicleInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonnelInformation">
+      <wsdl:input message="tns:GetPersonnelInformationSoapIn" />
+      <wsdl:output message="tns:GetPersonnelInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleKeyId">
+      <wsdl:input message="tns:GetVehicleKeyIdSoapIn" />
+      <wsdl:output message="tns:GetVehicleKeyIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonnelKeyId">
+      <wsdl:input message="tns:GetPersonnelKeyIdSoapIn" />
+      <wsdl:output message="tns:GetPersonnelKeyIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KeyEncoderServiceSoap" type="tns:KeyEncoderServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://trakeng.com/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleInformation">
+      <soap:operation soapAction="http://trakeng.com/GetVehicleInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonnelInformation">
+      <soap:operation soapAction="http://trakeng.com/GetPersonnelInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleKeyId">
+      <soap:operation soapAction="http://trakeng.com/GetVehicleKeyId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonnelKeyId">
+      <soap:operation soapAction="http://trakeng.com/GetPersonnelKeyId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KeyEncoderServiceSoap12" type="tns:KeyEncoderServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://trakeng.com/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleInformation">
+      <soap12:operation soapAction="http://trakeng.com/GetVehicleInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonnelInformation">
+      <soap12:operation soapAction="http://trakeng.com/GetPersonnelInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleKeyId">
+      <soap12:operation soapAction="http://trakeng.com/GetVehicleKeyId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonnelKeyId">
+      <soap12:operation soapAction="http://trakeng.com/GetPersonnelKeyId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KeyEncoderService">
+    <wsdl:port name="KeyEncoderServiceSoap" binding="tns:KeyEncoderServiceSoap">
+      <soap:address location="http://www.trakeng.com/FTLCS/Services/KeyEncoderService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KeyEncoderServiceSoap12" binding="tns:KeyEncoderServiceSoap12">
+      <soap12:address location="http://www.trakeng.com/FTLCS/Services/KeyEncoderService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

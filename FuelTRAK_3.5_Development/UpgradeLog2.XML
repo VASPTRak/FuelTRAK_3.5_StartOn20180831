@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FTLDAP_WEX_3.4.4">
+</Property><Property Name="Solution File" Value="C:\Sudhanshu_Work\AllWork\FuelTrak_Version_Repository\FuelTRAK_3.5_Development\FTLDAP_WEX_3.4.4.sln">
+</Property><Property Name="User Options File" Value="C:\Sudhanshu_Work\AllWork\FuelTrak_Version_Repository\FuelTRAK_3.5_Development\FTLDAP_WEX_3.4.4.suo">
+</Property><Property Name="Date" Value="Friday, April 21, 2017">
+</Property><Property Name="Time" Value="14:44 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FTLDAP_WEX_3.4.4.sln" Description="File successfully backed up as C:\Sudhanshu_Work\AllWork\FuelTrak_Version_Repository\FuelTRAK_3.5_Development\Backup\FTLDAP_WEX_3.4.4.sln">
+</Event><Event ErrorLevel="0" Project="" Source="FTLDAP_WEX_3.4.4.suo" Description="File successfully backed up as C:\Sudhanshu_Work\AllWork\FuelTrak_Version_Repository\FuelTRAK_3.5_Development\Backup\FTLDAP_WEX_3.4.4.suo">
+</Event><Event ErrorLevel="1" Project="FuelTRAK_3" Source="..\FuelTRAK_3.5_Development" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="" Source="FTLDAP_WEX_3.4.4.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FTLDAP_WEX_3.4.4.sln" Description="Converted">
+</Event></UpgradeLog>

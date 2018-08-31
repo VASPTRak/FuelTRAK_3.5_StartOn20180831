@@ -1,0 +1,349 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+<script language="JavaScript">
+<!--
+function FP_openNewWindow(w,h,nav,loc,sts,menu,scroll,resize,name,url) {//v1.0
+ var windowProperties=''; if(nav==false) windowProperties+='toolbar=no,'; else
+  windowProperties+='toolbar=yes,'; if(loc==false) windowProperties+='location=no,'; 
+ else windowProperties+='location=yes,'; if(sts==false) windowProperties+='status=no,';
+ else windowProperties+='status=yes,'; if(menu==false) windowProperties+='menubar=no,';
+ else windowProperties+='menubar=yes,'; if(scroll==false) windowProperties+='scrollbars=no,';
+ else windowProperties+='scrollbars=yes,'; if(resize==false) windowProperties+='resizable=no,';
+ else windowProperties+='resizable=yes,'; if(w!="") windowProperties+='width='+w+',';
+ if(h!="") windowProperties+='height='+h; if(windowProperties!="") { 
+  if( windowProperties.charAt(windowProperties.length-1)==',') 
+   windowProperties=windowProperties.substring(0,windowProperties.length-1); } 
+ window.open(url,name,windowProperties);
+}
+// -->
+</script>
+</head>
+
+<body>
+
+<table width="79%" >
+    <tr>
+        <td class="HelpMenuHeader" height="37" colspan="2">
+		<font face="Arial" size="5"><strong>Transaction 
+		Search/Edit</strong></font></td> 
+    </tr>
+    <tr>
+        <td width="28%" valign="top">The transaction button provides the user 
+		access to:<ul>
+			<li>Search and or edit a transaction,</li>
+			<li>Create a <a href="TransactionNew.htm"><font color="#000080">new transaction</font></a>, or</li>
+			<li><a href="TransactionExport.htm"><font color="#000080">Export</font></a> transactions.</li>
+		</ul>
+		</td>
+        <td width="50%">
+		<img border="0" src="images/ButtonTransaction2.jpg" width="245" height="90"></td>
+    </tr>
+    <tr>
+        <td colspan="2">From the Home page, do the following:</td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol" colspan="2">
+		<ol>
+			<li>Hover over the <b>Transactions</b>
+			<img border="0" src="images/ButtonTransaction.jpg" width="67" height="31"> 
+			button on the menu located on the left hand side of the screen.</li>
+			<li>Select <b>Search/Edit</b> with a single click.</li>
+			<li>Input search criteria as required.&nbsp; The Date From and To 
+			fields are mandatory, all other search fields are optional.</li>
+			<li>Click the <b>Search</b> button.</li>
+		</ol></td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol" colspan="2">
+		All optional fields can be run as a single item search or a range 
+		search by filling out the <b>From</b> and <b>To</b> fields.&nbsp; When 
+		running a single item search it is necessary to place the 
+		<p style="margin-top: 0; margin-bottom: 0">data in both 
+		the From and To fields. <i>(Example: Department# - From <u>001</u> To <u>
+		001</u>)</i></td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol" colspan="2">
+		<img border="0" src="images/TransactionSearchEdit.jpg" width="719" height="261"></td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol" colspan="2">
+		<ol>
+			<li onhelp="FP_openNewWindow('100', '100', false, false, false, false, false, false, '', /*href*/'images/CalendarMouseOver.jpg')">
+			<b>Date: </b>Select the date range for the report.&nbsp; 
+			When entering the date it must be formatted as <u>mm/dd/yyyy;</u> you can 
+			also use the popup calendar <img src=images/CalendarIcon.jpg> to populate the date fields. 
+			If all transactions are required for the report fill only the dates 
+			required and <b>click</b> <b>the Search button</b>.</li>
+			<li><b>Vehicle ID: </b>&nbsp;Enter a range or a single Vehicle ID;<i>
+			</i>maximum ten (10) character field. <i>(Example: From 354 - will 
+			pull all transactions for vehicle 354 listed in date time order, 
+			From <u>354</u> To <u>356</u> will pull all transactions for 
+			vehicles 354, 355 and 356).&nbsp; </i></li>
+			<li><b>Sentry#:</b> Enter a range or a single Sentry number; This is 
+			a numeric field with a maximum of three (3) digits. <i>(Example: a 
+			Sentry number should be entered as a 3 digit number - 002)</i></li>
+			<li><b>Key#: </b>Enter a range or a single Vehicle Key 
+			number, this is a numeric field with a maximum of five (5) digits.
+			<i>(Example: a key number should be entered as a 5 digit number - 
+			01017)</i></li>
+			<li><b>Personnel#:</b> Enter a range or a single Personnel number; 
+			maximum ten (10) character field.</li>
+			<li><b>Veh. Model:&nbsp; </b>Enter the vehicle's model; maximum 
+			twenty (20) character field.</li>
+			<li><b>Veh. Key:&nbsp; </b>Enter the key number assigned to the 
+			vehicle; this is a numeric field with a maximum of five (5) digits.
+			<i>(Example: a key number should be entered as a 5 digit number - 
+			01017)</i></li>
+			<li><b>VIN #:&nbsp; </b>Enter the Vehicle Identification Number; 
+			maximum of twenty (20) characters.</li>
+			<li><b>Veh. Desc.:&nbsp; </b>Enter the vehicle's description; 
+			maximum of fifty (50) characters.</li>
+			<li><b>Veh. Year:&nbsp; </b>Enter the vehicle's year; maximum of 
+			four (4) characters.</li>
+			<li><b>Veh Make:&nbsp; </b>Enter the vehicle make. <i>(Example: 
+			Honda, Chevy, Ford...)</i></li>
+			<li><b>Veh. Card:&nbsp; </b>Enter the vehicle's assigned employee 
+			card number; maximum seven (7) characters.</li>
+			<li><b>License #:&nbsp; </b>Enter the vehicle's license plate 
+			number; maximum nine (9) characters.</li>
+			<li><b>Dept #:</b> Enter a range or a single Department 
+			number; maximum three (3) digit field. <i>(Example: <u>001</u>).</i></li>
+		</ol>
+		</td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol" colspan="2">
+		The search results will be displayed below the search criteria fields.</td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol" colspan="2">
+		<img border="0" src="images/TransactionSearchEdit2.jpg" width="720" height="355"></td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol" colspan="2">
+		Once the transaction search is completed the user can either Edit or 
+		Delete a transaction.<p>Select the <u>Edit</u> link to the left of the 
+		transaction to open the transaction in the edit screen.</p>
+		<ul>
+			<li>Make any changes necessary.</li>
+			<li>Some fields are locked and cannot be changed:&nbsp; Description, 
+			Department, Key #, Tank, Product and Cost.<table border="0" width="990">
+				<tr>
+					<td width="165">
+					<ul type="circle">
+						<li>Description</li>
+					</ul>
+					</td>
+					<td width="815" valign="top">The vehicle description can 
+					only be changed from the <a href="Vehicle.htm">
+					<font color="#000080">Vehicle</font></a> Search/Edit screen.&nbsp; 
+					Note, if you change the vehicle's description it will apply 
+					to all transactions performed by that vehicle.</td>
+				</tr>
+				<tr>
+					<td width="165">
+					<ul type="circle">
+						<li>Department</li>
+					</ul>
+					</td>
+					<td width="815" valign="top">The vehicle's assigned 
+					department can only be changed from the Vehicle Search/Edit 
+					screen.&nbsp; Note, if you change the vehicle's description 
+					it will apply to all transactions performed by that vehicle.</td>
+				</tr>
+				<tr>
+					<td width="165">
+					<ul type="circle">
+						<li>Key #</li>
+					</ul>
+					</td>
+					<td width="815" valign="top">The key number cannot be 
+					changed.&nbsp; It is automatically issued by WinCC when a 
+					key is encoded.</td>
+				</tr>
+				<tr>
+					<td width="165">
+					<ul type="circle">
+						<li>Tank</li>
+					</ul>
+					</td>
+					<td width="815" valign="top">The assigned tank can only be 
+					changed from the <a href="Sentry.htm"><font color="#000080">
+					Sentry</font></a> Search/Edit screen.&nbsp; Note, if you 
+					change the Sentry's assigned tank it will apply to all 
+					transactions made at that Sentry.</td>
+				</tr>
+				<tr>
+					<td width="165">
+					<ul type="circle">
+						<li>Product</li>
+					</ul>
+					</td>
+					<td width="815" valign="top">The product can only be 
+					changed from the <a href="Tank.htm"><font color="#000080">
+					Tank</font></a> Search/Edit screen.&nbsp; Note, if you 
+					change the tank's assigned product(s) it will apply to all 
+					transactions made at that Sentry.</td>
+				</tr>
+				<tr>
+					<td width="165">
+					<ul type="circle">
+						<li>Cost</li>
+					</ul>
+					</td>
+					<td width="815" valign="top">The cost field is an auto 
+					calculate field, it cannot be changed.&nbsp; If the quantity 
+					field is changed the cost field will recalculate 
+					accordingly.</td>
+				</tr>
+			</table>
+			</li>
+			<li>The following fields can be changed without affecting other 
+			transactions.<table border="0" width="988">
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Date</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Enter the date manually or use 
+					the calendar popup icon located to the right hand side of 
+					the date field.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Time</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Enter the date in 24-hour 
+					notation. <i>(Example: 
+					18:00 for 6:00pm)</i></td>
+				</tr>
+				<tr>
+					<td width="164" valign="top">
+					<ul type="circle">
+						<li>Transaction No.</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">The transaction number can be 
+					changed but it is recommended that when it is *MAN* that you 
+					do not change it.&nbsp; *MAN* indicates that the transaction 
+					was a manual transaction.&nbsp; Changing this field can 
+					corrupt your data and make information harder to find at a 
+					later date.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Sentry</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Use the pull down menu to 
+					change the Sentry. Changing the Sentry number will 
+					automatically repopulate the Tank and Product fields with 
+					those assigned to that Sentry.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Vehicle</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Use the pull down menu to 
+					change the Vehicle.&nbsp; Changing the vehicle number will 
+					automatically repopulate the Description and Department 
+					fields with those assigned to that vehicle.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Personnel Name</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Use the button to the right of 
+					the field <img border="0" src="Transa2.gif" align="middle"> 
+					to open a pop up menu with a listing of personnel to choose 
+					from.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Optional</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">The optional field can be used 
+					to add notes, data is optional in this field.&nbsp; Maximum 
+					thirteen (13) character field.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Errors</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">It is recommended that this 
+					field remain unchanged.&nbsp; It indicates that this 
+					transaction had an error.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Odometer</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Delete the existing odometer 
+					and enter the new odometer reading.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Hours</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Delete the existing hours and 
+					enter the new hour reading.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Hose</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Use the pull down menu to 
+					change the hose number.</td>
+				</tr>
+				<tr>
+					<td width="164">
+					<ul type="circle">
+						<li>Quantity</li>
+					</ul>
+					</td>
+					<td width="814" valign="top">Delete the existing gallons 
+					and enter the new gallons, this will automatically be 
+					recalculated and change the cost field accordingly.</td>
+				</tr>
+			</table>
+			</li>
+		</ul>
+		<ul>
+			<li>Select the Save button to save changes and return to the 
+			previous screen.</li>
+			<li>Select the Cancel button to exit without saving the changes.</li>
+		</ul>
+		</td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol" colspan="2">
+		<img border="0" src="images/TransactionEdit.jpg" width="719" height="425"></td>
+    </tr>
+</table>
+
+</body>
+
+</html>

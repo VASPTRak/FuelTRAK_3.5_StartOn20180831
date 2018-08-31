@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Untitled Document</title>
+<link href="../Stylesheet/FuelTrak.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
+<script language="JavaScript">
+<!--
+function FP_openNewWindow(w,h,nav,loc,sts,menu,scroll,resize,name,url) {//v1.0
+ var windowProperties=''; if(nav==false) windowProperties+='toolbar=no,'; else
+  windowProperties+='toolbar=yes,'; if(loc==false) windowProperties+='location=no,'; 
+ else windowProperties+='location=yes,'; if(sts==false) windowProperties+='status=no,';
+ else windowProperties+='status=yes,'; if(menu==false) windowProperties+='menubar=no,';
+ else windowProperties+='menubar=yes,'; if(scroll==false) windowProperties+='scrollbars=no,';
+ else windowProperties+='scrollbars=yes,'; if(resize==false) windowProperties+='resizable=no,';
+ else windowProperties+='resizable=yes,'; if(w!="") windowProperties+='width='+w+',';
+ if(h!="") windowProperties+='height='+h; if(windowProperties!="") { 
+  if( windowProperties.charAt(windowProperties.length-1)==',') 
+   windowProperties=windowProperties.substring(0,windowProperties.length-1); } 
+ window.open(url,name,windowProperties);
+}
+
+function FP_popUpMsg(msg) {//v1.0
+ alert(msg);
+}
+// -->
+</script>
+</head>
+
+<body class="HelpMenu">
+
+<table width="100%" >
+    <tr>
+        <td class="HelpMenuHeader" height="37"><strong>Transaction Reports</strong></td><a href="intro.htm" >Return</a> 
+    </tr>
+    <tr>
+        <td>From the Home page, do the following:</td>
+    </tr>
+    <tr>
+        <td class="HelpMenuRightCol">
+		<ol>
+			<li>Select <b>Reports</b>
+			<img src="images/ButtonReports.jpg" alt="Report Button"id="IMG1" width="61" height="31"/> 
+			from the menu located on the left hand side of the screen.</li>
+			<li>Select <b>Transaction</b> by clicking on the applicable radio button.</li>
+			<li><b>Highlight</b> the Transaction Report that you would like to run.</li>
+			<li>Click the <b>Next</b> button.</li>
+		</ol></td>
+    </tr>
+    <tr>
+        <td style="width:100%"><img src="images/TransactionRpt.jpg" alt="Transaction Reports" id="IMG2"/></td>
+    </tr>
+    <tr>
+        <td style="width:100%">You will be prompted to enter report search criteria; 
+		The date fields are mandatory on all searches, all other fields are 
+		optional.
+		<p>All optional field can be run as a single item search or a range 
+		search by filling out the <b>From</b> and <b>To</b> fields.&nbsp; When 
+		running a single item search it is necessary to place the data in both 
+		the From and To fields. <i>(Example: Department# - From <u>001</u> To <u>
+		001</u>)</i></p>
+		<p><u>Search Criteria Fields:</u></td>
+    </tr>
+    <tr>
+        <td style="width:100%">
+		<ol>
+			<li onhelp="FP_openNewWindow('100', '100', false, false, false, false, false, false, '', /*href*/'images/CalendarMouseOver.jpg')">
+			<b>Date: </b>Select the date range for the report.&nbsp; 
+			When entering the date it must be formatted as <u>mm/dd/yyyy;</u> you can 
+			also use the popup calendar <img src=images/CalendarIcon.jpg> to populate the date fields.&nbsp; 
+			If all transactions are required for the report fill only the dates 
+			required and <b>Click</b> <b>Run Report</b>.</li>
+			<li><b>Time</b>: Enter the date in 24-hour notation. <i>(Example: 
+			22:00)</i></li>
+			<li><b>Vehicle ID: </b>&nbsp;Enter a range or a single Vehicle ID;<i>
+			</i>maximum ten (10) character field. <i>(Example: From 354 - will 
+			pull all transactions for vehicle 354 listed in date time order, 
+			From <u>354</u> To <u>356</u> will pull all transactions for 
+			vehicles 354, 355 and 356).&nbsp; </i></li>
+			<li><b>Department #:</b> Enter a range or a single Department 
+			number; maximum three (3) digit field. <i>(Example: <u>001</u>).</i></li>
+			<li><b>Tank #:</b> Enter a range or a single Tank number; maximum 
+			three (3) digit field.</li>
+			<li><b>Vehicle Type: </b>Enter a range or a single Vehicle Type; 
+			this field accepts a maximum of two (2) characters. <i>(Example: 
+			From <u>2D</u> To <u>4D</u>) </i></li>
+			<li><b>Vehicle Key#: </b>Enter a range or a single Vehicle Key 
+			number, this is a numeric field with a maximum of five (5) numerals.
+			<i>(Example: a key number should be entered as a 5 digit number - 
+			01017)</i></li>
+			<li><b>Sentry#:</b> Enter a range or a single Sentry number; This is 
+			a numeric field with a maximum of three (3) numerals. <i>(Example: a 
+			Sentry number should be entered as a 3 digit number - 002)</i></li>
+			<li><b>Personnel ID:</b> Enter a range or a single Personnel number; 
+			maximum ten (10) character field.</li>
+			<li><b>Zero Quantity Transactions Only:</b> Check this box if you 
+			want to run a report with all zero transactions only.</li>
+		</ol>
+		</td>
+    </tr>
+    <tr>
+        <td style="width:100%"><img src="images/TransactionRpt2.jpg" alt="Transaction Reports" id="IMG3"/>　</td>
+    </tr>
+</table>
+<table  width="100%">
+	<tr>
+	<td class="HelpMenuStdText" width="15%">　</td>
+	<td width="85%">　</td>
+	</tr>	
+	<tr>
+	<td class="HelpMenuStdText" width="15%"><b>Transaction Report</b></td>
+	<td width="85%"><b>Description</b></td>
+	</tr>	
+	<tr>
+	<td class="HelpMenuStdText" width="15%" valign="top">Date/Time Order</td>
+	<td width="85%">Produces a report with transactions in order by date.&nbsp; 
+	All transactions will be in ascending order by date/time.<p>Search Criteria 
+	Options 
+	Available:</p>
+	<ul>
+		<li>Date</li>
+		<li>Time</li>
+		<li>Vehicle ID</li>
+		<li>Department Number</li>
+		<li>Tank Number</li>
+		<li>Vehicle Type</li>
+		<li>Vehicle Key Number</li>
+		<li>Sentry Number</li>
+		<li>Personnel ID</li>
+	</ul>
+	</td>
+	</tr>	
+	<tr>
+	<td class="HelpMenuStdText" width="15%" valign="top">Sentry Order</td>
+	<td width="85%">Produces a report with transactions in ascending order by 
+	Sentry number, then by ascending date/time.
+	<p>Search Criteria 
+	Options Available:</p>
+	<ul>
+		<li>Date</li>
+		<li>Time</li>
+		<li>Vehicle ID</li>
+		<li>Department Number</li>
+		<li>Tank Number</li>
+		<li>Vehicle Type</li>
+		<li>Vehicle Key Number</li>
+		<li>Sentry Number</li>
+		<li>Personnel ID</li>
+	</ul>
+	</td>
+	</tr>	
+	<tr>
+	<td class="HelpMenuStdText" width="15%" valign="top">Personnel Order</td>
+	<td width="85%">Produces a report with transactions in ascending order by 
+	Personnel number, then by ascending date/time.
+	<p>Search Criteria 
+	Options Available:</p>
+	<ul>
+		<li>Date</li>
+		<li>Time</li>
+		<li>Vehicle ID</li>
+		<li>Department Number</li>
+		<li>Tank Number</li>
+		<li>Vehicle Type</li>
+		<li>Vehicle Key Number</li>
+		<li>Sentry Number</li>
+		<li>Personnel ID</li>
+	</ul>
+	</td>
+	</tr>	
+	<tr>
+	<td class="HelpMenuStdText" width="15%" valign="top">Vehicle Order</td>
+	<td width="85%">Produces a report with transactions in ascending order by 
+	Vehicle number, then by ascending date/time.
+	<p>Search Criteria 
+	Options Available:</p>
+	<ul>
+		<li>Date</li>
+		<li>Time</li>
+		<li>Vehicle ID</li>
+		<li>Department Number</li>
+		<li>Tank Number</li>
+		<li>Vehicle Type</li>
+		<li>Vehicle Key Number</li>
+		<li>Sentry Number</li>
+		<li>Personnel ID</li>
+	</ul>
+	</td>
+	</tr>	
+	<tr>
+	<td class="HelpMenuStdText" width="15%" valign="top">List of Errors</td>
+	<td width="85%">Produces a report of transactions with errors in ascending 
+	order by Transaction number, then by ascending date/time.
+	<p>Search Criteria 
+	Options Available:</p>
+	<ul>
+		<li>Date</li>
+		<li>Time</li>
+		<li>Vehicle ID</li>
+		<li>Department Number</li>
+		<li>Tank Number</li>
+		<li>Vehicle Type</li>
+		<li>Vehicle Key Number</li>
+		<li>Sentry Number</li>
+		<li>Personnel ID</li>
+	</ul>
+	</td>
+	</tr>	
+	<tr>
+	<td class="HelpMenuStdText" width="15%" valign="top">Master Key Usage</td>
+	<td width="85%" onclick="FP_popUpMsg('Please note that a Master Key is issued to\r\na Vehicle only.  A Personnel key cannot\r\nbe encoded as a Master Key.')">
+	Produces a report of Master Key transactions only in ascending order by
+	<font color="navy"><u>Master Key</u></font> number, then by ascending 
+	date/time.
+	<p>Search Criteria 
+	Available:</p>
+	<ul>
+		<li>Date</li>
+		<li>Time</li>
+		<li>Vehicle ID</li>
+		<li>Department Number</li>
+		<li>Tank Number</li>
+		<li>Vehicle Type</li>
+		<li>Vehicle Key Number</li>
+		<li>Sentry Number</li>
+		<li>Personnel ID</li>
+	</ul>
+	</td>
+	</tr>	
+	<tr>
+	<td class="HelpMenuStdText" width="15%" valign="top">Vehicle Type</td>
+	<td width="85%">Produces a report with transactions in ascending order by 
+	Vehicle Type, then by ascending date/time.
+	<p>Search Criteria 
+	Options Available:</p>
+	<ul>
+		<li>Date</li>
+		<li>Time</li>
+		<li>Vehicle ID</li>
+		<li>Department Number</li>
+		<li>Tank Number</li>
+		<li>Vehicle Type</li>
+		<li>Vehicle Key Number</li>
+		<li>Sentry Number</li>
+		<li>Personnel ID</li>
+	</ul>
+	</td>
+	</tr>	
+</table>
+
+</body>
+
+</html>

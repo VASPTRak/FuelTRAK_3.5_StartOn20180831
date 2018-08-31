@@ -1,0 +1,8 @@
+Date/Time----- 8/16/2012 5:21:30 PMError Message:---- Data is Null. This method or property cannot be called on Null values.Error Occured in:-App_Code.KeyEncoderService.GetVehicleInformation()
+Date/Time----- 8/16/2012 5:46:34 PMError Message:---- Conversion failed when converting the varchar value 'TEST' to data type int.Error Occured in:-App_Code.KeyEncoderService.GetVehicleInformation()
+Date/Time----- 8/16/2012 5:50:28 PMError Message:---- Conversion failed when converting the varchar value 'TEST' to data type int.Error Occured in:-App_Code.KeyEncoderService.GetVehicleInformation()
+Date/Time----- 8/16/2012 5:53:53 PMError Message:---- Conversion from type 'DBNull' to type 'String' is not valid.Error Occured in:-App_Code.KeyEncoderService.GetVehicleInformation()
+Date/Time----- 8/16/2012 5:54:38 PMError Message:---- Conversion from type 'DBNull' to type 'String' is not valid.Error Occured in:-App_Code.KeyEncoderService.GetVehicleInformation()
+Date/Time----- 8/16/2012 5:55:13 PMError Message:---- Conversion from type 'DBNull' to type 'String' is not valid.Error Occured in:-App_Code.KeyEncoderService.GetVehicleInformation()
+Date/Time----- 8/16/2012 5:59:37 PMError Message:---- Conversion from type 'DBNull' to type 'String' is not valid.Error Occured in:-App_Code.KeyEncoderService.GetVehicleInformation()
+Date/Time----- 9/21/2012 11:53:35 AMError Message:---- Object reference not set to an instance of an object.Error Occured in:-KeyEncoderService.GetvehicleKeyID

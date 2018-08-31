@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ID>492</ID>
+    <Tag_ID>TRAK01</Tag_ID>
+    <Sys_Nbr>0001</Sys_Nbr>
+    <Date_Added>2013-01-15T19:34:54.53+05:30</Date_Added>
+    <Miles>0</Miles>
+    <Hours>0</Hours>
+    <Limit>none</Limit>
+    <Fuels>NNNNNNNN</Fuels>
+    <Power>6</Power>
+    <Clicks>1609000</Clicks>
+    <Tag_Mode>Car Chip</Tag_Mode>
+    <Ignition_State>n/a</Ignition_State>
+    <MachineName>transtech28.transtech.com</MachineName>
+    <ProgrammedBy>Accesscode</ProgrammedBy>
+    <Vehicle_Make>12</Vehicle_Make>
+    <Vehicle_Model>12</Vehicle_Model>
+    <Vehicle_Year>12</Vehicle_Year>
+    <Vehicle_Product>DIESEL</Vehicle_Product>
+    <Calib_Miles>12</Calib_Miles>
+    <Calib_Completed>Yes</Calib_Completed>
+    <OBDII_Interface>TrakChip-327</OBDII_Interface>
+    <InstalledBy>12</InstalledBy>
+    <Mileage_Confirm>Yes</Mileage_Confirm>
+    <Tag_Install_LOC>Windshield,Middle Front</Tag_Install_LOC>
+    <Interface_Install_LOC>Below Steering Column</Interface_Install_LOC>
+    <Space_Under_Tag>None</Space_Under_Tag>
+    <ECM_LOC>Over Passenger Door</ECM_LOC>
+    <ECM_Conn_Type>Y Cable,White 3 Pin</ECM_Conn_Type>
+    <Avg_Signal>12</Avg_Signal>
+    <Tag_Hex_Date />
+    <PID31_Exists>true</PID31_Exists>
+    <Comments />
+    <Life_Time_Miles>12</Life_Time_Miles>
+    <ChkECM>false</ChkECM>
+    <SyncFlag>true</SyncFlag>
+    <MechanicalOdometer>12</MechanicalOdometer>
+  </Table>
+</NewDataSet>

@@ -1,0 +1,1872 @@
+/* Login Page */  
+body 
+{
+	PADDING-RIGHT: 0px;
+	MARGIN-TOP: 10px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	TEXT-ALIGN: center;
+	background-color: #336699;
+}
+
+.HomeFrame
+{
+    text-align: center;
+    background-color: #cccccc;
+}
+
+.MaximumPXTable
+{
+	width: 924px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.ThreeHundredPXTable
+{
+	width: 300px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.ThreeHundredFiftyPXTable
+{
+	width: 350px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.FourHundredPXTable
+{
+	width: 400px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.FiveHundredPXTable
+{
+	width: 500px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.SixHundredPXTable
+{
+	width: 600px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.SevenHundredPXTable
+{
+	width: 700px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.EightHundredPXTable
+{
+	width: 800px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.EightHundredFiftyPXTable
+{
+	width: 850px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+.EightNineHundredPXTable
+{
+	width: 900px; text-align:center;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+/*Used in MainMenu.aspx, UserControl/Header.ascx, */
+.MainTable1
+{
+	width:100%;text-align:left;
+	background-color: #555555;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+/*Standard label text used in tables*/
+
+.StdLableTxtLeft
+{
+    text-align:left; font-family:Arial; font-size:small; font-weight:bold;
+}
+
+.TankChartInchesBox
+{
+    text-align: left; font-family: Arial; font-weight: normal; font-size:small; 
+    margin-top: 15px;
+}
+
+.MeterReadingLabelText
+{
+    text-align:right; font-family:Arial; font-size:small; font-weight:bold;
+}
+
+
+/*Used for standard text box sizes on all .aspx pages*/
+
+.OneCharTxtBox
+{
+    text-align:left; width:10px; font-family:Arial; font-size:small;
+}
+
+.TwoCharTxtBox
+{
+    text-align:left; width:20px; font-family:Arial; font-size:small;
+}
+
+.ThreeCharTxtBox
+{
+    width:30px; font-family:Arial; font-size:small;
+}
+
+.FourCharTxtBox
+{
+    text-align:left; width:35px; font-family:Arial; font-size:small;
+}
+
+.FiveCharTxtBox
+{
+    text-align:left; width:40px; font-family:Arial; font-size:small;
+}
+
+.SixCharTxtBox
+{
+    text-align:left; width:50px; font-family:Arial; font-size:small;
+}
+
+.SevenCharTxtBox
+{
+    text-align:left; width:55px; font-family:Arial; font-size:small;
+}
+
+.EightCharTxtBox
+{
+    text-align:left; width:65px; font-family:Arial; font-size:small;
+}
+
+.NineCharTxtBox
+{
+    text-align:left; width:75px; font-family:Arial; font-size:small;
+}
+
+.TenCharTxtBox
+{
+    text-align:left; width:80px; font-family:Arial; font-size:small;
+}
+
+.FifteenCharTxtBox
+{
+   text-align:left; width:100px; font-family:Arial; font-size:small;
+}
+
+.SixteenCharTxtBox
+{
+   text-align:left; width:135px; font-family:Arial; font-size:small;
+}
+
+.TwentyCharTxtBox
+{
+   text-align:left; width:150px; font-family:Arial; font-size:small;
+}
+
+.TwentyFiveCharTxtBox
+{
+   text-align:left; width:220px; font-family:Arial; font-size:small;
+}
+
+.ThirtyCharTxtBox
+{
+    text-align:left; width:250px; font-family:Arial; font-size:small;
+}
+
+/*Used as the Main Header for all pages within the Home.aspx page*/
+.MainHeader
+{
+	font-weight:bold; font-family:arial; font-size:14pt; color:Black; 
+	text-align:center;
+	height: 19px;
+}
+
+/*Used as the Header for all Search Criteria screens within the Home.aspx page*/
+.HeaderSearchCriteria
+{
+	font-weight:normal; font-family:arial; font-size:12pt;
+	color:black; 
+	text-align:center;
+    height: 19px;
+}
+
+/*Used in Transaction_New_Edit.aspx, */
+.InputTextBox
+{
+	background-color:#C0C0C0;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#408080;	
+}
+
+/*Main Menu Page border around Welcome frame*/
+/*Used in MainMenu.aspx, */
+.MainMenuFrame
+{
+	border-left: black  outset;
+	border-top: black outset; 
+	border-right: black outset;
+    border-bottom: black outset; 
+    vertical-align:top;
+    margin-left:50px;
+}
+
+/*Used in Home.aspx, */
+.HyperlinkInactive
+{
+	font-family:arial; color:#460069;
+}
+
+/*Main Menu Page outer table row and column located behind Home.aspx frame, contains buttons*/
+/*Used in MainMenu.aspx, UserControl/MainMenu.aspx, */
+.MainMenuTable
+{
+	background-color:#336699;
+	width:100%; /*top: 100px;*/
+	text-align:left;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+/*Used in CreatUser.aspx, */
+.Create_UserMainTable
+{
+	width:40%; 
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	vertical-align:top;
+}
+
+/*Used in StatusInfo.aspx, */
+.SystemStatusMainTable
+{
+	width:60%; vertical-align:middle;
+	background-color:#a5bbc5; 
+	border-right: black 0.5pt solid; 
+	border-top: black 0.5pt solid; 
+	border-left: black 0.5pt solid; 
+	border-bottom: black 0.5pt solid;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTable
+{
+	width:100%;		
+}
+
+/*Used in Personnel_New_Edit.aspx, PollSetup.aspx, Sentry_New_Edit.aspx, 
+TankMonitor_New_Edit.aspx, Vehicle_Edit.aspx*/
+.VehicleEditTableSub
+{
+	width:310px; vertical-align:middle;
+	background-color:#a5bbc5; 
+	border-right: black 0.5pt solid; 
+	border-top: black 0.5pt solid; 
+	border-left: black 0.5pt solid; 
+	border-bottom: black 0.5pt solid;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTD
+{
+	font-family: arial; font-style:normal; font-weight:bold; font-size:small; 
+	text-align:left; height:24;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTDBox
+{
+	font-family: arial; font-style:normal; font-size:10pt; 
+	text-align:left; height:24; width:120px;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTDBtn
+{
+	font-family: arial; font-style:normal; font-size:10pt; 
+	text-align:center;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTDSub
+{
+	font-family: arial; font-style:normal; font-size:10pt; 
+	text-align:left; height:24; width:35%;
+	padding-left: 20px; 
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTDSub2
+{
+	font-family: arial; font-style:normal; font-size:10pt; 
+	text-align:left; height:24; width:25%;
+	padding-left: 25px;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTDSubChk
+{
+	font-family: arial; font-style:normal; font-size:10pt; 
+	text-align:left; height:24; width:20%;
+}
+
+/*Used in Personnel_New_Edit.aspx, Vehicle_Edit.aspx, */
+.VehicleEditTDRight
+{
+    text-align:right; height:24; padding-top:10px;
+}
+
+/*Used in Personnel_New_Edit.aspx, Vehicle_Edit.aspx, */
+.VehicleEditTDLeft
+{
+    text-align:left; height:24; padding-top:10px;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditPMPopUp
+{
+	width: 100%;
+	background-color: #A5BBC5;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditPMPopUpHeader
+{
+	font-family: arial; font-style:normal; font-size:12pt; 
+	color:white; 
+	text-align:left; vertical-align:middle;
+	background-color: #00004C;  
+	padding-left:5px;
+}
+
+.VehicleEditMsgPopUp
+{
+	width: 40%;
+	text-align:left; height:24;
+
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditPMPopUpLbl
+{
+	width: 60%;
+	font-family: arial; font-style:normal; font-size:10pt; 
+	text-align:left; height:24;
+	padding-left:10px
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditPMPopUpInput
+{
+	width: 40%;
+	text-align:left; height:24;
+	border-right: 1px solid; 
+	border-top: 1px solid; 
+	border-left: 1px solid; 
+	border-bottom: 1px solid
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTypePopUp
+{
+	height: 495px; width: 296px; 
+	text-align:center;
+	background-color: #A5BBC5;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTagInfoPopUp
+{
+	height: 400px; width: 700px; 
+	text-align:left;
+	background-color: #A5BBC5;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTypePopUpTxt
+{
+	font-family: arial; font-size:small; font-style:normal; 
+	text-align:center;
+	background-color: #A5BBC5;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditTagInfoPopUpTxt
+{
+	font-family: arial; font-size:small; font-style:normal; 
+	text-align:center;
+	background-color: #A5BBC5;
+}
+
+/*Used in PollingQueueSearch.aspx, TankInventory.aspx, */
+.TankInv
+{
+	 vertical-align: middle; text-align: center; width: 368px;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditHidden
+{
+	width: 1%;
+	border-right: black 1px solid; 
+	border-top: black 1px solid;
+    border-left: black 1px solid; 
+    border-bottom: black 1px solid
+}
+
+/*Used in Personnel_New_Edit.aspx, PollingQueueSearch.aspx, TankInventory.aspx, 
+Vehicle.aspx, Vehicle_Edit.aspx, */
+.VehicleEditBtn
+{
+	width: 100px; height: 25px; text-align: center;
+	font-family :arial ; font-size:small ;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehicleEditBtn2
+{
+	width: 90px; height: 25px; text-align: center;
+	font-family :arial ; font-size:small ; 
+}
+
+/*Used in Vehicle.aspx, */
+.VehicleTable
+{
+	width: 1024px;
+}
+
+/*Used in Vehicle.aspx, */
+.VehicleHidden
+{
+	width: 10px;
+}
+
+/*Used in Vehicle.aspx, */
+.VehicleSearchTD
+{
+	width: 665px;
+}
+
+/*Used in Vehicle.aspx, */
+.VehicleSearch
+{
+	font-weight: bold; font-size: small; font-family: arial;
+	text-align: left;
+}
+
+/*Used in Vehicle.aspx, */
+.VehicleResult
+{
+	border-top:solid 1 #4682B4;
+	border-right:solid 1 #4682B4;
+	border-left:solid 1 #4682B4;
+	border-bottom:solid 1 #4682B4; 
+	height: 23px;
+}
+
+/*Used in Sentry.aspx, TankCharts.aspx, TankMonitor.aspx, Vehicle.aspx, */
+.VehicleGrid
+{
+	font-family:Arial; font-size:9pt; width: 700px;
+	border-top:solid 1 #4682B4;
+	border-right:solid 1 #4682B4;
+	border-left:solid 1 #4682B4;
+	border-bottom:solid 1 #4682B4;
+}
+
+/*Used in Vehicle_Edit.aspx, */
+.VehPMTxtCnt
+{
+	width: 40%;
+	font-family: arial;	color:black;
+	text-align:left; height:24;
+	border-right:black 1px solid; 
+	border-top:black 1px solid; 
+	border-left:black 1px solid; 
+	border-bottom:black 1px solid;
+		
+}
+
+/*Used in StatusInfo.aspx, */
+.StatusReadOnlyText
+{
+	font-family: arial;		
+	color:black;
+	text-align:right;
+	border-right:black 1px solid; 
+	border-top:black 1px solid; 
+	border-left:black 1px solid; 
+	border-bottom:black 1px solid;
+	background-color:#E0E0E0;
+	
+}
+
+/*Used in StatusInfo.aspx, */
+.StatusReadOnlyText1
+{
+    font-family: arial;		
+	color:black;
+	text-align:left;
+	border-right:black 1px solid; 
+	border-top:black 1px solid; 
+	border-left:black 1px solid; 
+	border-bottom:black 1px solid;
+	background-color:#E0E0E0;
+}
+
+/*Used in UndoExport.aspx, */
+.UndoExportTD
+{
+	font-family: arial; font-size: 12pt; 
+	text-align:center; height: 24px; width: 100%;
+}
+
+/*UndoExport.aspx, */
+.UndoExportTD1
+{
+	font-family: arial; font-size: 12pt; 
+	text-align:center; height: 39px; width: 100%;
+}
+
+/*Used in TranslationTable.aspx, */
+.RadioBtnList
+{
+	VERTICAL-ALIGN: middle; CURSOR: hand; TEXT-ALIGN: left;
+}
+
+/*Used in TranslationTable.aspx, */
+.TransTableTd
+{
+	font-family: Arial; font-size: 9pt; width: 100%; 
+	border-top:solid 1 #4682B4;
+	border-right:solid 1 #4682B4;
+	border-left:solid 1 #4682B4;
+	border-bottom:solid 1 #4682B4;
+}
+
+/*Used in Trnasaction_New_Edit.aspx, */
+.txtNewEdittd1
+{
+	width: 159px;
+}
+
+/*Used in Trnasaction_New_Edit.aspx, */
+.DrpDwnList
+{
+	font-size: 9pt; 
+	border-right: #000000 1px solid; 
+	border-top: #000000 1px solid; 
+	border-left: #000000 1px solid; 
+	border-bottom: #000000 1px solid;
+}
+
+/*Used in PollingQueueSearch.aspx, Sentry.aspx, TankCharts.aspx, 
+TankInventory.aspx, TankMonitor.aspx, */
+.TankInv_RightLable
+{
+	font-size: small; font-family: arial; font-variant: normal; font-weight:bold;
+	text-align:left;
+    padding-bottom:3px; 
+    padding-top:3px;
+}
+
+/*Used in PollingQueueSearch.aspx, Sentry.aspx, TankCharts.aspx, 
+TankInventory.aspx, TankMonitor.aspx, */
+.TankInv_Left
+{
+	font-size: small; font-family: arial; font-variant: normal; 
+	height: 4px; text-align:left; 
+}
+
+/*Used in PollingQueueSearch.aspx, Sentry.aspx, TankCharts.aspx, 
+TankInventory.aspx, TankMonitor.aspx, */
+.TankInv_SearchTable
+{
+	font-family: arial; font-size: small;
+	text-align:left; 
+}
+
+/*Used in ExportSummary.aspx, ExportTransactions.aspx, */
+.SearchTable
+{
+	font-family: arial; font-size: 10pt; 
+	text-align:left;
+	padding-top:3px; 
+	padding-bottom:3px;
+}
+
+/*Used in PollingQueueSearch.aspx, TankInventory.aspx, */
+.TankInv_Header_Button
+{
+	font-size: small; font-family: arial;
+    font-variant: normal; height: 4px;color: black; 
+    text-align:center;
+}
+
+/*Used in PollingQueueSearch.aspx, TankInventory.aspx, */
+.TankInv_MainTable
+{
+	text-align:left; 
+	height:100%; width:85%;
+}
+
+/*Used in PollingQueueSearch.aspx, TankInventory.aspx, */
+.TableFull
+{
+	width: 800px;
+}
+
+/*Used in PollingQueueSearch.aspx, TankInventory.aspx, */
+.TankGrid
+{
+	 font-family: Arial; font-size: 9pt;
+     width: 100%;
+     border-color:Blue;
+}
+
+/*Used in TankInventory_New_Edit.aspx, */
+.TankInv_Add_MainTable
+{
+	text-align:left; height:50%; width:50%;
+}
+
+/*Used in TankInventory_New_Edit.aspx, */
+.TankInv_Add_SubTable
+{
+	text-align:left; height:100%; width:100%;
+}
+
+/*Used in TankInventory_New_Edit.aspx, */
+.TankInv_Add_RightLable
+{
+	font-size: small; font-family: arial; font-variant: normal; 
+	text-align:right; vertical-align:middle; width:20%;
+}
+
+/*Used in TankInventory_New_Edit.aspx, */
+.TankInv_Add_Left
+{
+	font-size: small; font-family: arial; font-variant: normal; 
+	text-align:left; Width:80%; vertical-align:middle;
+}
+
+/*Used in CreateUser.aspx, */
+.User_SubTable
+{
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px; 
+	border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+}
+
+/*Used in CreateUser.aspx, */
+.User_Lables
+{
+	font-size: small; font-family: arial; font-weight: bold;
+    font-variant: normal; width: 100px; height: 35px; 
+    vertical-align: middle; text-align: left;
+    padding-left:40px;
+}
+
+/*Used in StatusInfo.aspx, */
+.Status_Lables
+{
+	font-size: small; font-family: arial;
+    font-variant: normal; width: 35%; height: 35px; 
+    vertical-align: middle; text-align: left;
+}
+
+/*Used in StatusInfo.aspx, */
+.Status_LablesIndent
+{
+	font-size: small; font-family: arial; font-weight: bold;
+    font-variant: normal; height: 35px; 
+    vertical-align: middle; text-align: left;
+    padding-left:35px;
+}
+
+/*Used in CreateUser.aspx, */
+.User_TextBox
+{
+	font-weight: bold; font-size: small; font-family: arial;
+    font-variant: normal; width: 300px; height: 35px;
+    text-align:left;
+}
+
+/*Used in StatusInfo.aspx, */
+.Status_TextBox
+{
+	font-weight: bold; font-size: small; font-family: arial;
+    font-variant: normal; height: 35px;
+    text-align:left;
+}
+
+/*Used in Department.aspx, */
+.Dept_Header
+{
+	font-weight: bold; font-size: small; font-family: arial;
+    font-variant: normal; height: 4px;color: black; 
+    text-align:center;
+}
+
+/*Used in Department.aspx, */
+.Dept_Header_Button
+{
+	font-weight: bold; font-size: small; font-family: arial;
+    font-variant: normal; height: 4px;color: black; 
+    text-align:center;
+}
+
+/*Used in Department.aspx, */
+.Dept_MainMenuTable
+{
+	width:100%; 
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	vertical-align:top; text-align:center;
+}
+
+/*Used in Department.aspx, */
+.Dept_SubTable
+{
+	width:90%; top: 0px; text-align:center;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+
+/*Used in Department.aspx, */
+.Dept_SubTable1
+{
+    width: 800px;
+	top: 0px;
+	text-align:center;
+}
+
+/*Used in Department.aspx, */
+.Dept_Buttons
+{
+	Height:24px; Width:100px;text-align:center;
+	font-weight: normal; font-size: small; font-family: arial;
+    font-variant: normal;
+}
+
+/*Used in Department.aspx, */
+.Dept_Buttons1
+{
+	Height:24px; Width:100px;text-align:center;
+	font-weight: normal; font-size: small; font-family: arial;
+    font-variant: normal; 
+}
+
+/*Used in Department.aspx, */
+.Dept_Textbox
+{
+    text-align:left;
+	border-top:solid 1;
+	border-right:solid 1;
+	border-left:solid 1 ;
+	border-bottom:solid 1;
+	font-weight: normal; font-size: small; font-family: arial;
+}
+
+/*Used in Department.aspx, */
+.Dept_Grid_TD
+{
+	font-family: Arial; 
+	font-size: 9pt;
+	width: 600px; 
+}
+
+/*Used in Department.aspx, */
+.Dept_GridView
+{
+	PADDING-RIGHT: 3px;
+	PADDING-LEFT: 3px;
+	PADDING-BOTTOM: 3px;
+	PADDING-TOP: 3px; 
+}
+
+/*Used in Department.aspx, */
+.DeptTxtLabel
+{
+	 font-family:Arial; font-size:small; font-style:normal; font-weight:bold; color:Black;
+	 text-align:left; width: 150px;
+}
+
+/*Used in Department.aspx, */
+.Dept_GridView_FooterStyle
+{
+	 background-color:#CCCCCC;
+	 Color:Black;
+}
+
+/*Used in Department.aspx, */
+.Dept_GridView_EmptyDataRowStyle
+{
+	font-weight:bold;
+	Color:black;
+	text-align:Center;
+	vertical-align:Middle;
+}
+
+/*Used in Department_New_Edit.aspx, PersonnelImport.aspx, PollinqQueue_New_Edit.aspx,
+Product.aspx, Tank_New_Edit.aspx, */
+.NewDept_MainTable
+{
+	text-align:center; vertical-align:top;
+	width: 1024px;
+}
+
+/*Used in Department_New_Edit.aspx, PollingQueue_New-Edit.aspx,
+Tank_New_Edit.aspx, */
+.NewDept_SubTable
+{
+	text-align:center; vertical-align:top;
+    width: 600px;
+}
+
+/*Used in Department_New_Edit.aspx, PollingQueue_New_Edit.aspx,
+Tank_New_Edit.aspx, */
+.NewDept_Header
+{
+	font-weight: bold; font-size: small; font-family: arial;
+    font-variant: normal; height: 4px;color: black; text-align:left;
+}
+
+/*Used in Department_New_Edit.aspx, */
+.NewDept_Lable_Right
+{
+	text-align:left; font-size: small; font-family: arial;
+}
+
+/*Used in Department_New_Edit.aspx, Tank_New_Edit.aspx, */
+.NewDept_Textbox
+{
+	border:Solid 1 ;
+	font-family:arial;    font-size:small;
+}
+
+/*Used in Department_New_Edit.aspx, Tank_New_Edit.aspx,
+PollingQueue_New_Edit.aspx, TankMonitor_New_Edit.aspx, */
+.NewDept_ButtonTD
+{
+	height: 26px;
+	text-align:center; font-family:arial; font-size:Small; 
+	vertical-align:middle;
+}
+
+/*Used in Department_New_Edit.aspx, */
+.NewDept_ButtonFooter
+{
+	width: 50px; height: 26px;
+	text-align:center; font-family:arial; font-size:Small;
+}
+
+/*Used in InventoryPopup.aspx, PollingPopup.aspx, */
+.InvPopTable
+{
+	top: 0px;
+	text-align:center;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	/*border:none;*/
+}
+
+/*Used in InventoryPopup.aspx, PollingPopup.aspx, */
+.InvPopButton
+{
+	font-weight:bold;
+	height:70px;
+	Width:127px;
+}
+
+/*Used in Key_Encoder.aspx, */
+.Key_Table
+{
+	text-align:center;
+	width: 50%;
+}
+
+/*Used in Key_Encoder.aspx, */
+.Key_Table1
+{
+	text-align:center;
+	width: 400px;
+}
+
+/*Used in Key_Encoder.aspx, */
+.Key_Lable_Right
+{
+	width: 35%;text-align:left; font-size: small; font-family: arial;
+}
+
+/*Used in Key_Encoder.aspx, */
+.Key_Textbox_Left
+{
+	border-top:solid 1 ; 
+	border-right:solid 1 ;
+	border-left:solid 1;
+	border-bottom:solid 1;width: 80%;
+	font-family:arial;text-align:Left;font-size:small;
+	padding-top:3px;
+}
+
+/*Used in dd.aspx, MeterReadings.aspx, Sentry.aspx,
+TankCharts.aspx, TankMonitor.aspx, */
+.Meter_Main_Table
+{
+	text-align:center;
+
+}
+
+/*Used in dd.aspx, MeterReadings.aspx, */
+.Meter_MainSub_Tbl
+{
+	text-align:center; width:800px;
+}
+
+/*Used in dd.aspx, MeterReadings.aspx, */
+.Meter_Header
+{
+	font-weight: bold; font-size: 14pt; font-family: arial;
+	height: 20px; color: white; text-align:center;
+}
+
+/*Used in dd.aspx, MeterReadings.aspx, Sentry.aspx,
+TankCharts.aspx, TankMonitor.aspx, */
+.Meter_HeadButton
+{
+	font-family:arial;
+	height:24px;
+	text-align:center;
+}
+
+/*Used in dd.aspx, MeterReadings.aspx,
+Sentry.aspx, User.aspx, */
+.Meter_SearchTable
+{
+	width:400px; text-align:right;
+}
+
+/*Used in dd.aspx, MeterReadings.aspx, 
+TankCharts.aspx, TankMonitor.aspx, */
+.Meter_Search_SubTable
+{
+	text-align:center;
+	width:800px;
+}
+
+/*Used in dd.aspx, MeterReadings.aspx, */
+.Meter_Lable_Right
+{
+	width: 25%;
+	text-align:left; font-size: small; font-family: arial;
+	padding-left:100px;
+}
+
+/*Used in dd.aspx, MeterReadings.aspx, */
+.Meter_Textbox_Left
+{
+	width: 25%;
+	border-top:solid 1 ;
+	border-right:solid 1 ;
+	border-left:solid 1;
+	border-bottom:solid 1 ;
+	text-align:left;
+	font-family:arial; font-size:small;
+}
+
+/*Used in dd.aspx, MeterReadings.aspx, */
+.Meter_Grid
+{
+	font-family:Arial; font-size:9pt; width: 677px;
+	border-top:solid 1 #4682B4;
+	border-right:solid 1 #4682B4;
+	border-left:solid 1 #4682B4;
+	border-bottom:solid 1 #4682B4;
+	PADDING-RIGHT: 3px;
+	PADDING-LEFT: 3px;
+	PADDING-BOTTOM: 3px;
+	PADDING-TOP: 3px;
+	Width:100%; 
+}
+
+/*Used in MeterReadings_New_Edit.aspx, */
+.Meter_New_Sub1
+{
+	width: 100%; height: 100%;
+}
+
+/*Used in MeterReadings_New_Edit.aspx, */
+.Meter_New_Lable_Right
+{
+	width: 40%;
+	font-size: small; font-family: arial; font-weight:bold;
+	text-align:left; 
+}
+
+/*Used in MeterReadings_New_Edit.aspx, */
+.Meter_New_Textbox_Left
+{
+	border-top:solid 1;
+	border-right:solid 1 ;
+	border-left:solid 1;
+	border-bottom:solid 1;
+	width: 60%; text-align:left;
+	font-family:arial; font-size:small;
+}
+
+/*MeterReadings_New_Edit.aspx, */
+.Meter_New_Button
+{
+	border-top:solid 1;
+	border-right:solid 1;
+	border-left:solid 1;
+	border-bottom:solid 1;
+	width:100px;Height:24px;
+	font-family:arial;    font-size:small;
+}
+
+/*Used in MeterReadings_New_Edit.aspx, */
+.Meter_New_tblFindRec
+{
+	text-align:center;
+	width:100%; 
+}
+
+/*Used in MeterReadings_New_Edit.aspx, */
+.Meter_New_tblFindRec_TD
+{
+	width: 100%; text-align:center;
+}
+
+/*Used in MeterReadings_New_Edit.aspx, */
+.Meter_New_FotterButton
+{
+	Height:24px; Width:50px;
+}
+
+/*Used in MeterReadings_New_Edit.aspx, */
+.Meter_New_FotterLabel
+{
+    border-top:solid 1 Black;
+	border-right:solid 1 Black;
+	border-left:solid 1 Black;
+	border-bottom:solid 1 Black;
+	font-weight:bold;
+	font-family:arial; font-size:Small;
+	width:100px;
+}
+
+/*Used in Reports.aspx, */
+.ReportsMainTab
+{
+	font-family:arial; font-size:small;
+	width:80%;
+}
+
+/*Used in Reports.aspx, */
+.ReptSelect
+{
+	width: 600px; height:300px;
+    font-family: arial; font-size: 12pt; font-weight: normal;
+    border-right: black 1pt outset; 
+    border-top: black 1pt outset; 
+    border-left: black 1pt outset; 
+    border-bottom: black 1pt outset;
+    padding-top:5px;
+    padding-left:5px;
+   
+}
+
+/*Reports_Input.aspx, */
+.RtpInputTab
+{
+	width:550px;
+}
+
+/*Used in Reports_Input.aspx, */
+.RptInputLbl
+{
+	font-family: arial; font-weight: bold; font-size: small; color: black; 
+    text-align:center;
+}
+
+/*Used in Reports_Input.aspx, */
+.RptInputLblsub
+{
+	font-family: arial; font-weight: bold; font-size: small; color: black; padding:10px; 
+	height:40px
+}
+
+/*Used in ExportTransactions.aspx, */
+.ExportTransLabel
+{
+	font-family: arial; font-size: small;color: Black;
+}
+
+/*Used in ExportSummary.aspx, */
+.ExportTxtLabel
+{
+	font-family: arial; font-size: small; font-weight:bold; color: Black;
+	text-align:left; height:35px;
+}
+
+.ExportTxtLabelSub
+{
+	font-family: arial; font-size: small; font-weight:normal; color: Black;
+	text-align:left; height:35px;
+}
+
+
+/*Used in Personnel.aspx, Tank.aspx, */
+.Per_MainTable
+{
+	width:75%;text-align:left;	height: 100%;
+}
+
+/*Used in Personnel.aspx, Tank.aspx, */
+.Per_MainTable_sub
+{
+	text-align:center;
+}
+
+/*Used in Personnel.aspx, TankMonitor.aspx, User.aspx, */
+.Per_Header
+{
+	font-weight:bold; font-family:arial; font-size:small; color:black;
+	height: 19px; text-align:left;
+}
+
+/*Used in Personnel.aspx, */
+.Per_HeaderSub
+{
+	font-weight:normal; font-family:arial;font-size:12pt;color:black; 
+	text-align:left;
+	width: 100%; height: 10px;
+}
+
+/*Used in Personnel.aspx, Tank.aspx, */
+.Per_Right
+{
+	width: 25%;
+	text-align:right; font-size: small; font-family: arial; 
+	font-weight:bold;
+}
+
+/*Used in Personnel.aspx, Tank.aspx, */
+.Per_Left
+{
+	width: 25%;
+	text-align:Left; font-size: small; font-family: arial; 
+	font-weight:bold;
+}
+
+/*Used in Personnel, Tank.aspx, */
+.Per_tblContain1
+{
+	text-align:left; width:600px;
+}
+
+/*Used in Personnel.aspx, Tank.aspx, */
+.Per_tblContain1_Sub
+{
+	text-align:left;
+}
+
+/*Used in Personnel.aspx, */
+.Per_Lable_Right
+{
+	width: 25%;
+	text-align:left; 
+	font-size: small; font-family: arial; font-weight: bold;
+}
+
+/*Used in Personnel.aspx, */
+.Per_Textbox_Left
+{
+	border-top:solid 1;
+	border-right:solid 1;
+	border-left:solid 1;
+	border-bottom:solid 1;
+	font-family:arial; font-size:small; font-weight: bold;
+}
+
+/*Used in Personnel.aspx, Tank.aspx, User.aspx, */
+.Per_tdsearch
+{
+	font-family:arial; font-size:small;
+	width:100%; text-align:center;
+	color:Green; font-size:10pt;
+	border-top:solid 1 #4682B4;
+	border-right:solid 1 #4682B4;
+	border-left:solid 1 #4682B4;
+	border-bottom:solid 1 #4682B4;
+}
+ 
+ /*Used in Personnel_New_Edit.aspx, */
+ .Per_New_MainTbl
+{
+	text-align:center;
+	width:55%;
+}
+
+/*Used in Personnel_New_Edit.aspx, */
+.Per_New_lblNew_Edit
+{
+	font-weight:bold; font-family:arial;font-size:14pt;Color:white; 
+	text-align:center; vertical-align:top;
+	width:30%;
+}
+
+/*Used in Personnel_New_Edit.aspx, */
+.Per_New_lblNew_EditLabel
+{
+	font-weight:bold; font-family:arial; font-size:small;
+	Color:black; text-align:left; vertical-align:middle;
+	height:29px; 
+}
+
+/*Used in Personnel_New_Edit.aspx, */
+.Per_New_lblNew_TxtBox
+{
+	font-weight:normal; font-family:arial; font-size:10pt;
+	Color:black; text-align:left; vertical-align: middle; 
+}
+
+/*Used in Personnel_New_Edit.aspx, */
+.Per_New_lblNew_CheckBox
+{
+	font-weight:normal; font-family:arial; font-size:small; Color:black; 
+	text-align:left; vertical-align:middle;
+
+}
+
+/*Used PollingQueue_New_Edit.aspx, */
+.NewPollingQueue_Lable_Left
+{
+    font-weight:bold; font-family:arial;font-size:small; 
+    Color:black; 
+    text-align:left; height:32px;
+}
+
+/*Used in transaction.aspx, */
+.Trans_MainTable
+{
+	width:100%; text-align:left;
+}
+
+/*Used in Transaction.aspx, Transaction_New_Edit.aspx, */
+.Trans_HeaderMain
+{
+	font-weight:bold; font-family:arial;font-size:14pt;
+	color:white; text-align:center;
+	width: 100%; height: 19px;
+}
+
+/*Used in Transaction.aspx, */
+.Trans_MainTable_RightTD
+{
+	width:50%; text-align:left;
+}
+
+/*Used in Transaction.aspx, */
+.Trans_MainTable_LeftTD
+{
+	width:50%; text-align:right;
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch
+{
+	font-family: arial; font-size: 12pt; 
+	width:100%;
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch_From
+{
+	font-family: arial; font-size: 8pt; font-weight: bold;
+	height: 10px; text-align:center;
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch_To
+{
+	font-family: arial; font-size: 8pt; font-weight: bold;
+	height: 10px; text-align:center;
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch_TD1
+{
+	font-family: arial; font-size: 10pt; height: 10px;
+	text-align:left; vertical-align:middle;
+	padding-left: 6px
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch_TD3
+{
+	font-family: arial; font-size: 10pt; height: 10px;
+	text-align:left; vertical-align:middle;
+	padding-left: 15px
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch_TDCal
+{
+	font-family: arial; font-size: 10pt; height: 10px;
+	text-align:left; vertical-align:middle;
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch_TextBox
+{
+	font-family: arial; font-size: 10pt; text-align:left; 
+	height: 14px; width:100px;
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch_TD6
+{
+	font-family: arial; font-size: 10pt; height: 10px;
+	text-align:left; vertical-align:middle;
+	padding-left: 8px
+}
+
+/*Used in Transaction.aspx, */
+.Trans_tblSearch_Search_Btn
+{
+	font-family: arial; font-size:8pt;height: 18px; 
+	text-align:left; vertical-align:middle
+}
+
+/*Used in Transaction.aspx, */
+.Trans_BtnSearch
+{
+	Width:62px; font-family:arial; font-size:Small; 
+	text-align:left;
+}
+
+/*Used in Transaction_New_Edit.aspx, */
+.Trans_ADD_MainTable
+{
+	width:95%; text-align:center;
+}
+
+/*Used in Transaction_New_Edit.aspx, */
+.Trans_ADD_Main_Sub
+{
+	width:100%; text-align:center;
+}
+
+/*Used in Transaction_New_Edit.aspx, */
+.Trans_ADD_TD2
+{
+	font-family:arial; font-size:12pt;
+    font-weight:normal;
+	width:25%; text-align:left; 
+}
+
+/*Used in Transaction_New_Edit.aspx, */
+.Trans_ADD_TD3
+{
+	font-weight:normal; font-family:arial; font-size:12pt;
+	width:25%; text-align:left;
+	padding-left: 50px;
+}
+
+/*Used in Transaction_New_Edit.aspx, */
+.Trans_ADD_SubTable_TD
+{
+	font-weight:normal; font-family:arial; font-size:12pt;
+    color:black;
+    width:25%; text-align:left;
+}
+
+/*Used in Transaction_New_Edit.aspx, */
+.Trans_ADD_SubTable_TD_Txt
+{
+	font-family:arial; font-size:10pt;
+    color:black;
+    width:25%; text-align:left; 
+}
+
+/*Used in Transaction_New_Edit.aspx, */
+.Trans_ADD_SubTable_TD_Txt2
+{
+	text-align:center; font-family:arial; font-size:12pt;
+    color:black;
+}
+
+/*Used in TranslationTable.aspx, */
+.Translation_Main
+{
+	height:70%; width:75%;
+}
+
+/*Used in TranslationTable.aspx, */
+.Translation_Main_Sub
+{
+	height:100%; width:100%; 
+}
+
+/*Used in TranslationTable.aspx, */
+.Translation_List
+{
+	font-weight:bold; font-family:arial; font-size:medium;
+	text-align:right; width: 100%;
+}
+
+/*Used in TranslationTable.aspx, */
+.Translation_ListSub
+{
+	font-family:arial;font-size:small;
+	text-align:left;width: 100%; 
+}
+
+/*Used in TranslationTable_New_Edit.aspx, */
+.Translation_Main_ADD
+{
+	width:60%; text-align:center;
+}
+
+/*Used in TranslationTable_New_Edit.aspx, */
+.Translation_Sub_ADD
+{
+	height:100%; width:100%;
+}
+
+/*Used in TranslationTable_New_Edit.aspx, */
+.Translation_Left_Right_Cols
+{
+	font-family:Arial; font-size:small;
+	width:39%; text-align:left; 
+}
+
+/*Used in PersonnelImport.aspx, Product.aspx, */
+.ImportPers_SubTable
+{
+	width:330px;
+	vertical-align:top;
+}
+
+/*Used in PersonnelImport.aspx, PollSetup.aspx, */
+.ImportPers_Header
+{
+	font-weight: bold; font-size: small; font-family: arial;
+    font-variant: normal; height: 4px;color: black; 
+    text-align:center;
+}
+
+/*Used in PersonnelImport.aspx, */
+.ImportPers_Lable_Left
+{
+	font-size: small; font-family: arial; color:Black; font-weight: bold;
+	text-align:right; 
+}
+
+/*Used in PersonnelImport.aspx, */
+.ImportPers_Lable_Right
+{
+	font-size: small; font-family: arial;
+	width: 50%; text-align:left; 
+}
+
+/*Used in PersonnelImport.aspx, PollSetup.aspx, */
+.ImportPers_Lable_Felds_Header_Table
+{
+/*	width: 95%; */
+	font-size: small; font-family: arial;
+	border-right: #000000 1px solid; 
+	border-top: #000000 1px solid; 
+	border-left: #000000 1px solid; 
+	border-bottom: #000000 1px solid;
+	text-align:center; 
+}
+
+/*Used in PersonnelImport.aspx, */
+.ImportPers_Lable_Felds_Header
+{
+	text-align:center; vertical-align:top;
+	font-size: small; font-family: arial; font-weight: bold;
+}
+
+/*Used in PersonnelImport.aspx, PollSetup.aspx, */
+.ImportPers_Lable_Felds_Header1
+{
+	font-size: small; font-family: arial; font-weight: bold;
+	text-align:left; 
+}
+
+/*Used in TankMonitor_New_Edit.aspx, */
+.TM_Header
+{
+	font-weight: bold; font-size: small; font-family: arial;
+    font-variant: normal; height: 4px;color: black; 
+    text-align:center;
+}
+
+/*Used in TankMonitor_New_Edit.aspx, */
+.TM_Lable_Left
+{
+	text-align:left; font-size: small; font-family: arial; 
+	color:Black;
+	padding-left:20px;
+}
+
+/*Used in TankMonitor_New_Edit.aspx, */
+.TM_Lable_Right
+{
+	text-align:left; font-size: small; font-family: arial;
+	padding-left:20px;
+}
+
+/*Used in Tank_New_Edit.aspx, */
+.NewTank_Lable_Left
+{
+	width: 30%;
+	text-align:left; font-size: small; font-family: arial; 
+	color:Black;
+}
+
+/*Used in PollingQueue_New_Edit.aspx, Tank_New_Edit.aspx, */
+.NewTank_Lable_Right
+{
+	height:24px;
+	text-align:left; font-size: small; font-family: arial;
+}
+
+/*Used in Sentry_New_Edit.aspx, */
+.Sentry_Label_Left
+{
+	text-align:left; font-family:arial; font-size: small;
+	padding-left:30px;
+}
+
+/*Used in Sentry_New_Edit.aspx, */
+.Sentry_Lable_Right
+{
+	text-align:left; font-family:arial; font-size: small;
+}
+
+/*Used in Product.aspx, Sentry_New_Edit.aspx, */
+.Sentry_Lable_Center
+{
+	text-align:left; font-family:arial; font-size: small;
+}
+
+/*Used in Reports_Input.aspx, Sentry_New_Edit.aspx, */
+.Sentry_New_Button
+{
+	border-top:solid 1;
+	border-right:solid 1;
+	border-left:solid 1;
+	border-bottom:solid 1;
+	width:100px;Height:24px;
+	font-family:arial; font-size:small;
+}
+
+/*Used in Sentry_New_Edit.aspx, */
+.Sentry_Main
+{
+	width:100%;
+}
+
+/*Used in Sentry_New_Edit.aspx, */
+.Sentry_Border_Subright
+{
+    text-align:left ; font-size: small; font-family: arial;
+}
+
+/*Used in Sentry_New_Edit.aspx, */
+.Sentry_Label_Hose
+{
+	text-align:center; 
+	font-family:arial; font-size: small;  font-weight: bold;
+}
+
+/*Used in Sentry_New_Edit.aspx, */
+.Sentry_Tank_Dropdown
+{
+	text-align:left; font-family:arial; font-size: small;
+}
+
+/*Used in Product.aspx, */
+.Product_Center
+{
+	text-align:left; font-size: small; font-family: arial;
+	width:30%
+}
+
+/*Used in PollSetup.aspx, */
+.PollSetup_SubTable
+{
+    width:100%;
+	height: 100%;
+	vertical-align:top;
+}
+
+/*Used in Help/CreateUser.htm, */
+.HelpMenu
+{
+    background:white;
+    font-family:Arial; font-size:small; font-style:normal; 
+    color:black;
+}
+
+/*Used in Help/CreateUser.htm, */
+.HelpMenuTable
+{
+    text-align:left;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+
+/*Used in Help/CreateUser.htm, */
+.HelpMenuHeader
+{
+    font-family:Arial; font-size:24px; font-weight:bold; color:Black
+}
+
+/*Used in Help/CreateUser.htm, */
+.HelpMenuLeftCol
+{
+    text-align:left;
+}
+
+/*Used in Help/CreateUser.htm, */
+.HelpMenuRightCol
+{
+    text-align:left;
+    padding-left:15px;
+}
+
+.HelpMenuStdText
+{
+    text-align:left;
+}
+.ReconForm
+{
+	width: 200px; text-align:right;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	text-align: left;
+	text-align: left; font-family: Arial; font-weight: normal; font-size:small;
+}
+
+.ReconFormLableLeft
+{
+	width: 80px; text-align:left;
+	font-family: Arial; font-weight: normal; font-size:x-small;
+
+}
+
+.ReconFormLableCenter
+{
+	width: 80px; text-align:center;
+	font-family: Arial; font-weight: normal; font-size:x-small;
+
+}
+
+.ReconFormTxtBoxRight
+{
+	width: 100px; height:10px; text-align:right;
+	font-family: Arial; font-weight: normal; font-size:x-small;
+
+}
+
+.ReconFormTxtBoxLabel
+{
+	text-align:center; 
+	font-family: Arial; font-weight: normal; font-size:x-small
+
+}
+
+.ReconFormTxtBoxTop
+{
+	width: 200px; height:10px; text-align:right;
+	font-family: Arial; font-weight: normal; font-size:x-small;
+
+}
+
+.ReconHeader
+{
+	font-weight:bold; font-family:arial; font-size:14pt; color:Black; 
+	text-align:center;
+	height: 14px;
+}
+.DeletedLabel
+{
+	font-weight:bold; font-family:arial; font-size:20pt; color:red; 
+	text-align:center; height:30px;
+}
+
+.button {
+  display: block;
+  width: 96px;
+  height: 15px;
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  Text: abc;
+}
+
+.modalBackground
+        {
+            background-color: Black;
+            filter: alpha(opacity=90);
+            opacity: 0.8;
+        }
+        
+          .modalPopup
+        {
+            background-color: #FFFFFF;
+            border-width: 1px;
+            border-style: solid;     
+           
+            width: 550px;
+            height: 450px;
+        }
+        
+        
+        
+ .ModalPopupBG
+{
+    background-color: #FFFFFF;
+    filter: alpha(opacity=50);
+    opacity: 0.7;
+}
+
+.HellowWorldPopup
+{
+    min-width:200px;
+    min-height:150px;
+    background:white;
+}
+
+.HellowWorldPopup
+{
+    min-width:200px;
+    min-height:150px;
+    background:white;
+}
+
+.VehicleEditTableSub1
+{
+	height:150px;
+	width:800px; vertical-align:middle;
+	background-color:#a5bbc5; 
+	border-right: black 0.5pt solid; 
+	border-top: black 0.5pt solid; 
+	border-left: black 0.5pt solid; 
+	border-bottom: black 0.5pt solid;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.SentryFourHundredPXTable
+{
+	width: 450px; text-align:center;
+	height:350px;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}
+.SentryThreeHundredPXTable
+{
+	width: 330px; text-align:center;
+	height:350px;
+	margin-left:0px;
+	margin-right:0px;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+}

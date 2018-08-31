@@ -1,0 +1,10 @@
+﻿Imports System
+Imports System.Data
+Imports System.Configuration
+Imports System.Web
+Imports System.Data.SqlClient
+
+Partial Class FIFODeliveries
+    Inherits System.Web.UI.Page
+
+End Class
